@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.home
+package com.our.tripteller.data
 
 data class RegionData(
     val id: String,

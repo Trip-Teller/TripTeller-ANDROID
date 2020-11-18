@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.our.tripteller.R
+import com.our.tripteller.data.RegionData
 
 class RegionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

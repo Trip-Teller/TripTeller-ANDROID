@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.our.tripteller.R
+import com.our.tripteller.data.HomeData
 
 class HomeViewHolder(itemView: View, val itemClick: (View) -> Unit) : RecyclerView.ViewHolder(itemView) {
 

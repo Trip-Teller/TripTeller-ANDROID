@@ -6,4 +6,17 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#b0b0b0</color>
+
+    <color name="ice_blue">#ecf7f8</color>
+    <color name="greyish_brown">#444444</color>
+    <color name="cool_blue">#3eb7c7</color>
+    <color name="ice_blue_two">#eff8f9</color>
+    <color name="brown_grey">#b0b0b0</color>
+    <color name="grey_01_2">#e0e0e0</color>
+    <color name="tripteller_grey_01_2">#ebebeb</color>
+    <color name="tripteller_grey_04_2">#d1d1d1</color>
+    <color name="tripteller_skyblue_2">#60c2cf</color>
+    <color name="tripteller_raspberry_2">#dc3a9b</color>
+    <color name="tripteller_grey_05_2">#787878</color>
+
 </resources>

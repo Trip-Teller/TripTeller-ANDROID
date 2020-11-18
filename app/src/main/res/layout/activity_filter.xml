@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.Filter.FilterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="19dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:text="필터설정"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:text="필터를 설정하면 나에게 꼭 맞는\n컨설턴트를 찾을 수 있어요."
+            android:textColor="@color/greyish_brown"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/act_filter_txt_which_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:text="어떤 테마를 원하세요?"
+            android:textColor="@color/greyish_brown"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_filter_activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_which_theme" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_healing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_filter_healing"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_activity"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_which_theme" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_shopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_filter_shopping"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_healing"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_which_theme" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_dish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_dish"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_activity" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_picture"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_dish"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_dish" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_nature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_nature"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_picture"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_picture" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_pleasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_pleasure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_dish" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_art"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_pleasure"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_pleasure" />
+
+        <TextView
+            android:id="@+id/act_filter_txt_who"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:text="누구와 함께 떠날 예정인가요?"
+            android:textColor="@color/greyish_brown"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_pleasure" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_alone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_filter_alone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_who" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_couple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_filter_couple"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_alone"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_who" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_parents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_parents"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_alone" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_family"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_parents"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_parents" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_friends"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_parents" />
+
+
+        <TextView
+            android:id="@+id/act_filter_txt_how"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:text="이런 필터는 어때요?"
+            android:textColor="@color/greyish_brown"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_friends" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_iconomy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_iconomy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_txt_how" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_walker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_walker"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_iconomy"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_iconomy" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_filter_drive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/act_filter_btn_iconomy" />
+
+        <ImageView
+            android:id="@+id/act_filter_btn_luxury"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/selector_filter_luxury"
+            app:layout_constraintStart_toEndOf="@+id/act_filter_btn_drive"
+            app:layout_constraintTop_toTopOf="@+id/act_filter_btn_drive" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
