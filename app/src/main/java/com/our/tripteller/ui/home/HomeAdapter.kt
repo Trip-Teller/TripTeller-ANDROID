@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.our.tripteller.R
+import com.our.tripteller.data.HomeData
 
 class HomeAdapter(private val context : Context, val itemClick: (View) -> Unit) : RecyclerView.Adapter<HomeViewHolder>() {
     var datas = mutableListOf<HomeData>()

@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.home
+package com.our.tripteller.data
 
 data class HomeData(
     val mainimg : String,
