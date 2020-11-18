@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_mainimg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/img_card_blank"
+            android:foreground="@drawable/foregroundimg"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="16dp"
+            app:layout_constraintDimensionRatio="1:1.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_roundstroke_17"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="2dp"
+            android:text="부산"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:fontFamily="@font/notosanskr"
+            android:textFontWeight="500"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@+id/iv_mainimg"
+            app:layout_constraintTop_toTopOf="@+id/iv_mainimg" />
+
+        <TextView
+            android:id="@+id/tv_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20dp"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tag1"
+            app:layout_constraintStart_toStartOf="@+id/tv_tag1" />
+
+        <TextView
+            android:id="@+id/tv_tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:text="#커플여행"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:includeFontPadding="false"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mainimg"
+            app:layout_constraintStart_toStartOf="@+id/iv_mainimg" />
+
+        <TextView
+            android:id="@+id/tv_tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="#맛집투어"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_tag1"
+            app:layout_constraintTop_toTopOf="@+id/tv_tag1" />
+
+        <TextView
+            android:id="@+id/tv_tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="#커플여행"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_tag2"
+            app:layout_constraintTop_toTopOf="@+id/tv_tag2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
