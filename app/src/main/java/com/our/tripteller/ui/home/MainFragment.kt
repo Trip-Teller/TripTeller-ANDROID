@@ -1,5 +1,6 @@
 package com.our.tripteller.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import com.our.tripteller.ItemDecoration
 import com.our.tripteller.MainActivity
 import com.our.tripteller.R
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
 
@@ -35,9 +37,8 @@ class MainFragment : Fragment() {
         loadRegionDatas()
 
         homeAdapter = HomeAdapter(view.context) { view: View ->
-            // 저기 이름에다가 activity이름 넣어줘!
-//            var intent = Intent(activity as MainActivity, 이름::class.java)
-//            startActivity(intent)
+            var intent = Intent(activity as MainActivity, DetailActivity::class.java)
+            startActivity(intent)
         }
         rv_home.adapter = homeAdapter
         rv_home.offscreenPageLimit = 2

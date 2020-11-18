@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimary"
+            app:contentScrim="@color/black"
             app:expandedTitleMarginStart="15dp"
             app:expandedTitleMarginBottom="20dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
@@ -53,7 +53,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:background="@drawable/black_top_gradation"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -79,7 +79,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <view
+                <View
                     android:id="@+id/view"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -95,9 +95,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="위어트립텔러"
+                    android:fontFamily="@font/noto_sans_kr_bold"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/view"
                     app:layout_constraintTop_toTopOf="@+id/act_detail_img_profile"
                     app:layout_constraintBottom_toTopOf="@+id/textView3"/>
@@ -108,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:text="24살"
                     android:textColor="@color/greyish_brown"
+                    android:fontFamily="@font/noto_sans_kr_regular"
                     android:textSize="16sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="@+id/act_detail_img_profile"
@@ -120,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:src="@drawable/ic_dot"
+                    android:fontFamily="@font/noto_sans_kr_regular"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
                     app:layout_constraintTop_toTopOf="@+id/textView3" />
@@ -131,7 +133,7 @@
                     android:text="여자"
                     android:textColor="@color/greyish_brown"
                     android:textSize="16sp"
-                    android:textStyle="normal"
+                    android:fontFamily="@font/noto_sans_kr_regular"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="@+id/textView3" />
@@ -146,6 +148,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="마, 이게 붓싼이다! "
+                android:fontFamily="@font/noto_sans_kr_bold"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="23dp"/>
 
@@ -156,6 +159,7 @@
                 android:textStyle="normal"
                 android:textSize="16sp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/noto_sans_kr_regular"
                 android:lineSpacingExtra="8sp"
                 android:text="안녕하세요, 트립텔러로 활동하고 있는 부산 토박이 97년생 위어트립텔러입니다. :) 반가워요. 사실 쓸 말이 별로 없어서 아무말 대잔치나 해야겠어요.\n\n
 
@@ -166,9 +170,86 @@
                 android:layout_marginHorizontal="23dp"
                 android:layout_marginTop="8dp"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iceblue_roundbox"
+                android:layout_marginHorizontal="11dp"
+                android:layout_marginTop="28dp"
+                android:padding="12dp"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="추천맛집 🥘" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginTop="8dp"
+                    android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!\n장소는 부산광역시 해운대구 00-000 랍니다!"
+                    />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="추천카페 ☕️"
+                    android:layout_marginTop="28dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginTop="8dp"
+                    android:text="해운대가 훤히 보이는 OO카페를 추천드려요~\n
+뷰가 아주 좋답니다 ㅎㅎ 여기서 대판 싸웠던 고등학교 동창들과 화해했던 기억이 나네요!"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="28dp"
+                    android:textColor="@color/black"
+                    android:text="추천명소 🏝️"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginTop="8dp"
+                    android:text="저는 다대포 해수욕장을 추천드려요! 전세계에서 가장 아름다운 낙조를 보실 수 있을 거예요. 아주 로맨틱해서 프로포즈 장소로도 손색이 없죠!"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_getconsult"
+                android:layout_marginTop="28dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
