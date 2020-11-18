@@ -51,6 +51,10 @@ dependencies {
 
     //동그란 이미지 커스텀 뷰 라이브러리 : https://github.com/hdodenhof/CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //모서리 둥근 imageView 라이브러리 : https://github.com/vinc3m1/RoundedImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //Glide 적용 가능한 모서리 둥근 imageView 라이브러리 : https://github.com/rishabh876/RoundedImageView?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7549
+    implementation 'com.rishabhharit.roundedimageview:RoundedImageView:0.8.4'
     //Retrofit 라이브러리 : https://github.com/square/retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:retrofit-mock:2.6.2'
@@ -66,7 +70,9 @@ dependencies {
     implementation 'com.android.support:design:29.0.0'
     //Glide 적용 가능한 모서리 둥근 imageView 라이브러리 : https://github.com/rishabh876/RoundedImageView?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7549
     implementation 'com.rishabhharit.roundedimageview:RoundedImageView:0.8.4'
-
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
     //페이징 라이브러리
     def paging_version = "2.1.2"
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"

@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.MainFragment">
 
-    <Button
-        android:id="@+id/btn_detail"
+    <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="디테일 "/>
+        android:fontFamily="@font/notosanskr"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:text="어디로 🚗 떠나볼까?"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="19dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_region"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:listitem="@layout/item_region" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/rv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingBottom="70dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_region"
+        tools:listitem="@layout/item_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
