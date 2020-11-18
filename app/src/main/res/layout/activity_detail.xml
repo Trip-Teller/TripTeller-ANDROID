@@ -1,311 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/black_bottom_gradation"
-    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content"
     tools:context=".ui.home.Detail.DetailActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+        android:layout_height="match_parent"
+        android:background="@drawable/black_bottom_gradation"
+        android:fitsSystemWindows="true">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="350dp"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/black"
-            app:expandedTitleMarginBottom="20dp"
-            app:expandedTitleMarginStart="15dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
 
-            <FrameLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:orientation="vertical"
-                app:layout_collapseMode="pin">
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/black"
+                app:expandedTitleMarginBottom="20dp"
+                app:expandedTitleMarginStart="15dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/busan"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="pin">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/busan"
+                        app:layout_collapseMode="pin" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/black_bottom_gradation" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="24dp">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="120dp"
+                            android:fontFamily="@font/noto_sans_kr_regular"
+                            android:text="부산"
+                            android:textColor="@color/tripteller_grey_04_2"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/TextStyle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="해운대 24년 거주 부산 토박이의 \n
+맛집 여행기 들어보실래요?"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/act_detail_rv_hashtag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_detail_hashtag" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp"
                     app:layout_collapseMode="pin" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="bottom"
-                    android:background="@drawable/black_bottom_gradation" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginBottom="24dp">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="143dp"
-                        android:fontFamily="@font/noto_sans_kr_regular"
-                        android:text="부산"
-                        android:textColor="@color/tripteller_grey_04_2"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        style="@style/TextStyle3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView"
-                        android:text="해운대 24년 거주 부산 토박이의 \n
-맛집 여행기 들어보실래요?" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/act_detail_rv_hashtag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="18dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView4"
-                        tools:itemCount="1"
-                        tools:listitem="@layout/item_detail_hashtag" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </FrameLayout>
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:theme="@style/ThemeOverlay.MaterialComponents.Light"
-                app:contentInsetStart="0dp"
-                app:contentInsetStartWithNavigation="0dp"
-                app:layout_collapseMode="pin" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:src="@drawable/btn_getconsult"
-        app:backgroundTint="#00000000" />
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/black_top_gradation"
-        android:overScrollMode="never"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/white_top_roundbox"
-            android:orientation="vertical">
+            android:background="@drawable/black_top_gradation"
+            android:overScrollMode="never"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp">
-
-                <ImageView
-                    android:id="@+id/act_detail_img_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/ic_detail_profile_blank"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:background="@color/grey_01_2"
-                    app:layout_constraintBottom_toBottomOf="@+id/act_detail_img_profile"
-                    app:layout_constraintStart_toEndOf="@+id/act_detail_img_profile"
-                    app:layout_constraintTop_toTopOf="@+id/act_detail_img_profile" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="위어트립텔러"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
-                    app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toTopOf="@+id/act_detail_img_profile" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:text="24살"
-                    android:textColor="@color/greyish_brown"
-                    android:textSize="16sp"
-                    android:textStyle="normal"
-                    app:layout_constraintBottom_toBottomOf="@+id/act_detail_img_profile"
-                    app:layout_constraintStart_toStartOf="@+id/textView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:src="@drawable/ic_dot"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:text="여자"
-                    android:textColor="@color/greyish_brown"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
-                    app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/act_detail_txt_content_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="23dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/noto_sans_kr_bold"
-                android:text="마, 이게 붓싼이다! "
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/act_detail_txt_content_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="23dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/noto_sans_kr_regular"
-                android:lineSpacingExtra="8sp"
-                android:text="안녕하세요, 트립텔러로 활동하고 있는 부산 토박이 97년생 위어트립텔러입니다. :) 반가워요. 사실 쓸 말이 별로 없어서 아무말 대잔치나 해야겠어요.\n\n
-
-그리고 사실... 저는 부산 출신이 아니랍니다!!(폭탄발언) 저는 사실 서울 사람이라구요! 이렇게 오늘도 여러 사람을 낚고 갑니다. 하하.\n\n
-
-아무튼 좋은 여행을 위해 제가 컨설팅을 해 드리겠습니다. 부산은 돼지국밥에 정구지 팍팍 넣어 먹는게 제맛인데 말이죠. 부산이 그립네요... 후우... 진수야.. 잘 지내니...?"
-                android:textColor="@color/black"
-
-                android:textSize="16sp"
-                android:textStyle="normal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="11dp"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/iceblue_roundbox"
-                android:orientation="vertical"
-                android:padding="12dp">
+                android:background="@drawable/white_top_roundbox"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:id="@+id/act_detail_img_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_detail_profile_blank"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/grey_01_2"
+                        app:layout_constraintBottom_toBottomOf="@+id/act_detail_img_profile"
+                        app:layout_constraintStart_toEndOf="@+id/act_detail_img_profile"
+                        app:layout_constraintTop_toTopOf="@+id/act_detail_img_profile" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="위어트립텔러"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView3"
+                        app:layout_constraintStart_toEndOf="@+id/view"
+                        app:layout_constraintTop_toTopOf="@+id/act_detail_img_profile" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:text="24살"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/act_detail_img_profile"
+                        app:layout_constraintStart_toStartOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:src="@drawable/ic_dot"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:text="여자"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
+                    android:id="@+id/act_detail_txt_content_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천맛집 🥘"
+                    android:text="마, 이게 붓싼이다! "
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/act_detail_txt_content_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="23dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:lineSpacingExtra="8sp"
-                    android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!\n장소는 부산광역시 해운대구 00-000 랍니다!"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="안녕하세요, 트립텔러로 활동하고 있는 부산 토박이 97년생 위어트립텔러입니다. :) 반가워요. 사실 쓸 말이 별로 없어서 아무말 대잔치나 해야겠어요.\n\n
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천카페 ☕️"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+그리고 사실... 저는 부산 출신이 아니랍니다!!(폭탄발언) 저는 사실 서울 사람이라구요! 이렇게 오늘도 여러 사람을 낚고 갑니다. 하하.\n\n
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:lineSpacingExtra="8sp"
-                    android:text="해운대가 훤히 보이는 OO카페를 추천드려요~\n
-뷰가 아주 좋답니다 ㅎㅎ 여기서 대판 싸웠던 고등학교 동창들과 화해했던 기억이 나네요!"
+아무튼 좋은 여행을 위해 제가 컨설팅을 해 드리겠습니다. 부산은 돼지국밥에 정구지 팍팍 넣어 먹는게 제맛인데 말이죠. 부산이 그립네요... 후우... 진수야.. 잘 지내니...?"
                     android:textColor="@color/black"
+
                     android:textSize="16sp"
                     android:textStyle="normal" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="11dp"
                     android:layout_marginTop="28dp"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천명소 🏝️"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:background="@drawable/iceblue_roundbox"
+                    android:orientation="vertical"
+                    android:layout_margin="12dp"
+                    android:paddingHorizontal="12dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:lineSpacingExtra="8sp"
-                    android:text="저는 다대포 해수욕장을 추천드려요! 전세계에서 가장 아름다운 낙조를 보실 수 있을 거예요. 아주 로맨틱해서 프로포즈 장소로도 손색이 없죠!"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="추천맛집 🥘"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:lineSpacingExtra="8sp"
+                        android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!\n장소는 부산광역시 해운대구 00-000 랍니다!"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="추천카페 ☕️"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:lineSpacingExtra="8sp"
+                        android:text="해운대가 훤히 보이는 OO카페를 추천드려요~\n
+뷰가 아주 좋답니다 ㅎㅎ 여기서 대판 싸웠던 고등학교 동창들과 화해했던 기억이 나네요!"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="추천명소 🏝️"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/noto_sans_kr_regular"
+                        android:lineSpacingExtra="8sp"
+                        android:text="저는 다대포 해수욕장을 추천드려요! 전세계에서 가장 아름다운 낙조를 보실 수 있을 거예요. 아주 로맨틱해서 프로포즈 장소로도 손색이 없죠!"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="28dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/btn_getconsult" />
+        </androidx.core.widget.NestedScrollView>
 
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/btn_getconsult"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
