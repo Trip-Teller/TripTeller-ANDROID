@@ -12,6 +12,10 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import com.our.tripteller.ItemDecoration
 import com.our.tripteller.MainActivity
 import com.our.tripteller.R
+import com.our.tripteller.data.HomeData
+import com.our.tripteller.data.RegionData
+import com.our.tripteller.ui.home.Detail.DetailActivity
+import com.our.tripteller.ui.home.Filter.FilterActivity
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
@@ -37,15 +41,20 @@ class MainFragment : Fragment() {
         loadRegionDatas()
 
         homeAdapter = HomeAdapter(view.context) { view: View ->
-            // 저기 이름에다가 activity이름 넣어줘!
-//            var intent = Intent(activity as MainActivity, 이름::class.java)
-//            startActivity(intent)
+            var intent = Intent(activity as MainActivity, DetailActivity::class.java)
+            startActivity(intent)
         }
         rv_home.adapter = homeAdapter
         rv_home.offscreenPageLimit = 3
         rv_home.clipToPadding = false
         rv_home.clipChildren = false
         rv_home.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+
+        btn_filter.setOnClickListener {
+            val intent = Intent(context, FilterActivity::class.java)
+            startActivity(intent)
+        }
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(10))

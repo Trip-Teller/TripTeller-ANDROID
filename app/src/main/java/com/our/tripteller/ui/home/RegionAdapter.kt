@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.our.tripteller.R
+import com.our.tripteller.data.RegionData
 
 class RegionAdapter(private val context : Context) : RecyclerView.Adapter<RegionViewHolder>() {
     var datas = mutableListOf<RegionData>()
