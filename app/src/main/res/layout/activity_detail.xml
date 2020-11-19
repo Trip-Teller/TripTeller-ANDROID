@@ -17,8 +17,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                app:contentScrim="@android:color/transparent"
                 app:scrimAnimationDuration="600"
+                app:contentScrim="@color/black2"
                 app:expandedTitleMarginBottom="20dp"
                 app:expandedTitleMarginStart="15dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -84,9 +84,8 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/black_top_gradation"
+            android:background="#f0000000"
             android:overScrollMode="never"
-            android:clipToPadding="false"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
 
@@ -94,7 +93,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/white_top_roundbox"
-                android:paddingBottom="92dp"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -213,7 +211,8 @@
                     android:layout_marginTop="28dp"
                     android:background="@drawable/iceblue_roundbox"
                     android:orientation="vertical"
-                    android:paddingHorizontal="12dp">
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginBottom="92dp">
 
                     <TextView
                         android:layout_width="wrap_content"
