@@ -12,8 +12,6 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         var detailHashtagAdapter = DetailHashtagAdapter(view.context)
-        setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(false)
 
         act_detail_rv_hashtag.adapter = detailHashtagAdapter
         act_detail_rv_hashtag.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
