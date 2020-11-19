@@ -84,7 +84,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/black_top_gradation"
+            android:background="#f0000000"
             android:overScrollMode="never"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
@@ -211,7 +211,8 @@
                     android:layout_marginTop="28dp"
                     android:background="@drawable/iceblue_roundbox"
                     android:orientation="vertical"
-                    android:paddingHorizontal="12dp">
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginBottom="92dp">
 
                     <TextView
                         android:layout_width="wrap_content"
