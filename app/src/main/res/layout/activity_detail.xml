@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                app:contentScrim="@color/black"
+                app:contentScrim="@color/black2"
                 app:expandedTitleMarginBottom="20dp"
                 app:expandedTitleMarginStart="15dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
