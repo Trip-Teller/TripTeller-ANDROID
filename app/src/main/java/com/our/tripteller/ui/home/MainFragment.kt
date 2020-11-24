@@ -1,7 +1,11 @@
 package com.our.tripteller.ui.home
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Point
 import android.os.Bundle
+import android.util.Log
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +52,7 @@ class MainFragment : Fragment() {
         rv_home.offscreenPageLimit = 3
         rv_home.clipToPadding = false
         rv_home.clipChildren = false
+        //rv_home.setPadding(16,0,16,calculateBottom())
         rv_home.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
 
@@ -113,4 +118,17 @@ class MainFragment : Fragment() {
         regionAdapter.notifyDataSetChanged()
     }
 
+//    private fun calculateBottom() : Int{
+//        val display = activity!!.windowManager.defaultDisplay
+//        val size = Point()
+//        display.getSize(size)
+//        val height = size.y
+//        return height - dpToPx(this.context!!,669)
+//    }
+//
+//    private fun dpToPx(context: Context, dp:Int):Int{
+//        return TypedValue.applyDimension(
+//            TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(),
+//            context.resources.displayMetrics).toInt()
+//    }
 }
