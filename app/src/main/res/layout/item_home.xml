@@ -9,12 +9,11 @@
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_mainimg"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:background="@drawable/img_card_blank"
         android:foreground="@drawable/foregroundimg"
         android:scaleType="fitXY"
         app:riv_corner_radius="16dp"
-        app:layout_constraintDimensionRatio="1:1.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
