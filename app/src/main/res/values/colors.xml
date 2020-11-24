@@ -5,6 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="black2">#212121</color>
     <color name="gray">#b0b0b0</color>
 
     <color name="ice_blue">#ecf7f8</color>
@@ -18,5 +19,7 @@
     <color name="tripteller_skyblue_2">#60c2cf</color>
     <color name="tripteller_raspberry_2">#dc3a9b</color>
     <color name="tripteller_grey_05_2">#787878</color>
+
+    <color name="black_30">#4c000000</color>
 
 </resources>
