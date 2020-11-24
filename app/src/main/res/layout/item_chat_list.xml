@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/selector_chatlist"
+    android:layout_height="88dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_profile"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_detail_profile_blank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="홍옌옌"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="16sp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toEndOf="@+id/civ_profile"
+        app:layout_constraintTop_toTopOf="@+id/civ_profile" />
+
+    <TextView
+        android:id="@+id/tv_preview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="안녕하세요~~ 다름이 아니라 정말로 궁금한 게 생겼는데요... 혹시 술 잘 왜 간격이 있는거지 정말"
+        android:textColor="@color/greyish_brown"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/civ_profile"
+        app:layout_constraintStart_toStartOf="@+id/tv_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nickname"
+        app:layout_constraintEnd_toStartOf="@id/tv_time"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/notosanskr"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        android:text="오후 8:24"
+        android:textColor="@color/tripteller_grey_05_2"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skyblue_roundbox_10"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="1dp"
+        android:text="99"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
