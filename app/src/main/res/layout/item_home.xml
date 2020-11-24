@@ -58,7 +58,8 @@
         android:textColor="@color/white"
         android:textFontWeight="500"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_tag4"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_tag4"/>
 
     <TextView
@@ -99,18 +100,17 @@
         android:id="@+id/tv_tag4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/notosanskr"
+        android:layout_marginStart="24dp"
         android:background="@drawable/white_roundstroke_24"
-        android:paddingVertical="3dp"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
         android:paddingHorizontal="12dp"
+        android:paddingVertical="3dp"
         android:text="쇼핑"
         android:textColor="@color/white"
         android:textFontWeight="500"
         android:textSize="16dp"
-        android:includeFontPadding="false"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_mainimg"
+        app:layout_constraintBottom_toTopOf="@+id/transparent"
         app:layout_constraintStart_toStartOf="@+id/iv_mainimg" />
 
     <TextView
@@ -146,5 +146,12 @@
         android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/tv_tag5"
         app:layout_constraintTop_toTopOf="@+id/tv_tag5" />
+
+    <View
+        android:id="@+id/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
