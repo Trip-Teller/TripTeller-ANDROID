@@ -22,7 +22,7 @@ class ChatRoomActivity : AppCompatActivity() {
         lateinit var writeSocket: DataOutputStream
         lateinit var readSocket: DataInputStream
         private val ip = "192.168.1.123" // IP 번호
-        private val port = 9999 // port 번호
+        private val port = 8080 // port 번호
         var data = ""
         val messageData = mutableListOf<MessageData>()
 
