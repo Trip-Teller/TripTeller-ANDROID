@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import com.our.tripteller.MainActivity
 import com.our.tripteller.R
 import com.our.tripteller.data.ChatListData
+import com.our.tripteller.ui.chat.ChatRoom.ChatRoomActivity
 import kotlinx.android.synthetic.main.fragment_chat.*
 
 class ChatFragment : Fragment() {
@@ -26,9 +28,10 @@ class ChatFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         chatListAdapter = ChatListAdapter(view.context) { view: View ->
-//            var intent = Intent(activity as MainActivity, ::class.java)
-//            startActivity(intent)
+            var intent = Intent(activity as MainActivity, ChatRoomActivity::class.java)
+            startActivity(intent)
         }
         rv_chat_list.adapter = chatListAdapter
         loadChatListDatas()
