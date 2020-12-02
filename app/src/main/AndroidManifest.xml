@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity"></activity>
+        <activity android:name=".TermsActivity"></activity>
+        <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity" />
         <activity android:name=".ui.home.Filter.FilterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -46,8 +46,6 @@ class ChatFragment : Fragment() {
             add(ChatListData(profileImg = "", nickname = "홍옌옌", preview = "궁금한게 있어요", time = "오후 8:50", count = "99"))
             add(ChatListData(profileImg = "", nickname = "홍옌옌", preview = "궁금한게 있어요", time = "오후 8:50", count = "99"))
             add(ChatListData(profileImg = "", nickname = "홍옌옌", preview = "궁금한게 있어요", time = "오후 8:50", count = "99"))
-            add(ChatListData(profileImg = "", nickname = "홍옌옌", preview = "궁금한게 있어요", time = "오후 8:50", count = "99"))
-            add(ChatListData(profileImg = "", nickname = "홍옌옌", preview = "궁금한게 있어요", time = "오후 8:50", count = "99"))
         }
         chatListAdapter.datas = chatListData
         chatListAdapter.notifyDataSetChanged()
