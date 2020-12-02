@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_logout"
+    android:layout_width="328dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_roundbox_16">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_withdrawal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/notosanskr"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:text="정말 탈퇴하시겠어요?\n보여드릴 재미있는 서비스가 많아요!"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/gray_roundbox_10"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="네, 할게요."
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:background="@drawable/iceblue_roundbox_10"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="아뇨, 안 해요!"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_ok"
+        app:layout_constraintTop_toTopOf="@+id/btn_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

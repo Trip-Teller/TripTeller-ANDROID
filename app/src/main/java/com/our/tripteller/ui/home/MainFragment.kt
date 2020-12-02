@@ -2,9 +2,7 @@ package com.our.tripteller.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -36,6 +34,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         regionAdapter = RegionAdapter(view.context)
+
+        setHasOptionsMenu(true)
         rv_region.adapter = regionAdapter
         rv_region.addItemDecoration(ItemDecoration(this.context!!, 8,0))
         loadRegionDatas()
@@ -49,12 +49,6 @@ class MainFragment : Fragment() {
         rv_home.clipToPadding = false
         rv_home.clipChildren = false
         rv_home.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-
-
-        btn_filter.setOnClickListener {
-            val intent = Intent(context, FilterActivity::class.java)
-            startActivity(intent)
-        }
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(10))
@@ -111,5 +105,20 @@ class MainFragment : Fragment() {
         }
         regionAdapter.datas = regionData
         regionAdapter.notifyDataSetChanged()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.filter, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.filter -> {
+                val intent = Intent(context, FilterActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
