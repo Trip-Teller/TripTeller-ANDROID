@@ -18,6 +18,10 @@ import kotlinx.android.synthetic.main.custom_toast.view.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    val FINISH_INTERVAL_TIME : Long = 2000
+    var backPressedTime : Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -101,5 +105,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        val tempTime = System.currentTimeMillis()
+        val intervalTime = tempTime - backPressedTime
+
+        if (intervalTime in 0..FINISH_INTERVAL_TIME) {
+            super.onBackPressed()
+        }
+        else {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), "'뒤로'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 }
