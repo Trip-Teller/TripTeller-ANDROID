@@ -11,16 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TermsActivity"></activity>
-        <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity" />
-        <activity android:name=".ui.home.Filter.FilterActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.sign.ProfileActivity"></activity>
+        <activity android:name=".ui.sign.SigninActivity" />
+        <activity android:name=".ui.sign.SignupActivity" />
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TermsActivity" />
+        <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity" />
+        <activity android:name=".ui.home.Filter.FilterActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".ui.home.Detail.DetailActivity"
             android:theme="@style/noStatus" />
