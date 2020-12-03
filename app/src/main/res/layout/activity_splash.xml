@@ -13,6 +13,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/london"
+        android:foreground="#4c000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

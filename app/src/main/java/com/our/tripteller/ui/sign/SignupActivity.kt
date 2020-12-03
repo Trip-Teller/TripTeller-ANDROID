@@ -3,8 +3,11 @@ package com.our.tripteller.ui.sign
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import com.our.tripteller.R
+import kotlinx.android.synthetic.main.activity_chat_room.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
@@ -18,6 +21,23 @@ class SignupActivity : AppCompatActivity() {
         var pwd2 = false
         var same = false
 
+        act_signup_edit_pwd1.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) = Unit
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(s?.length!! < 5){
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    act_signup_text_pwdLengh.visibility = View.VISIBLE
+                }
+                else{
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signup_text_pwdLengh.visibility = View.GONE
+                }
+            }
+        })
+
         act_signup_btn.setOnClickListener {
 
             id = if (act_signup_edit_id.text.isNullOrBlank()) {
@@ -29,7 +49,7 @@ class SignupActivity : AppCompatActivity() {
             }
 
             pwd1 =
-                if (act_signup_edit_pwd1.text.isNullOrBlank() || act_signup_edit_pwd1.text.length < 5) {
+                if (act_signup_edit_pwd1.text.isNullOrBlank()) {
                     act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_24)
                     act_signup_text_pwdLengh.visibility = View.VISIBLE
                     false
