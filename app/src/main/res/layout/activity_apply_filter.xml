@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mypage.ApplyFilterActivity">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:paddingVertical="12dp"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="취향선택"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:includeFontPadding="false"
+        android:padding="5dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        android:text="다음" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="어떤 테마를 소개할 건가요?"
+                android:textColor="@color/greyish_brown"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/selector_filter_activity"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <ImageView
+                android:id="@+id/btn_healing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_healing"
+                app:layout_constraintStart_toEndOf="@+id/btn_activity"
+                app:layout_constraintTop_toTopOf="@+id/btn_activity" />
+
+            <ImageView
+                android:id="@+id/btn_shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_shopping"
+                app:layout_constraintStart_toStartOf="@+id/btn_activity"
+                app:layout_constraintTop_toBottomOf="@id/btn_activity" />
+
+            <ImageView
+                android:id="@+id/btn_dish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_dish"
+                app:layout_constraintStart_toEndOf="@+id/btn_shopping"
+                app:layout_constraintTop_toTopOf="@+id/btn_shopping" />
+
+            <ImageView
+                android:id="@+id/btn_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_filter_picture"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/btn_dish"
+                app:layout_constraintTop_toTopOf="@+id/btn_dish" />
+
+            <ImageView
+                android:id="@+id/btn_nature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_filter_nature"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/btn_shopping"
+                app:layout_constraintTop_toBottomOf="@+id/btn_shopping" />
+
+            <ImageView
+                android:id="@+id/btn_pleasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_pleasure"
+                app:layout_constraintStart_toEndOf="@+id/btn_nature"
+                app:layout_constraintTop_toTopOf="@+id/btn_nature" />
+
+            <ImageView
+                android:id="@+id/btn_art"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_filter_art"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/btn_pleasure"
+                app:layout_constraintTop_toTopOf="@+id/btn_pleasure" />
+
+            <ImageView
+                android:id="@+id/btn_alone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_alone"
+                app:layout_constraintStart_toStartOf="@+id/btn_nature"
+                app:layout_constraintTop_toBottomOf="@+id/btn_nature" />
+
+            <ImageView
+                android:id="@+id/btn_couple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_couple"
+                app:layout_constraintStart_toEndOf="@+id/btn_alone"
+                app:layout_constraintTop_toTopOf="@+id/btn_alone" />
+
+            <ImageView
+                android:id="@+id/btn_parents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_parents"
+                app:layout_constraintStart_toStartOf="@+id/btn_alone"
+                app:layout_constraintTop_toBottomOf="@+id/btn_alone" />
+
+            <ImageView
+                android:id="@+id/btn_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_friends"
+                app:layout_constraintStart_toEndOf="@+id/btn_parents"
+                app:layout_constraintTop_toTopOf="@+id/btn_parents" />
+
+            <ImageView
+                android:id="@+id/btn_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_filter_family"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/btn_parents"
+                app:layout_constraintTop_toBottomOf="@+id/btn_parents" />
+
+            <ImageView
+                android:id="@+id/btn_iconomy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_iconomy"
+                app:layout_constraintStart_toEndOf="@+id/btn_family"
+                app:layout_constraintTop_toTopOf="@+id/btn_family" />
+
+            <ImageView
+                android:id="@+id/btn_walker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_filter_walker"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/btn_iconomy"
+                app:layout_constraintTop_toTopOf="@+id/btn_iconomy" />
+
+            <ImageView
+                android:id="@+id/btn_luxury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_luxury"
+                app:layout_constraintStart_toStartOf="@+id/btn_family"
+                app:layout_constraintTop_toBottomOf="@+id/btn_family" />
+
+            <ImageView
+                android:id="@+id/btn_drive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_drive"
+                app:layout_constraintStart_toEndOf="@+id/btn_luxury"
+                app:layout_constraintTop_toTopOf="@+id/btn_luxury" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
