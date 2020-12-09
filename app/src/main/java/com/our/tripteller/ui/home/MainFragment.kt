@@ -12,8 +12,8 @@ import com.our.tripteller.MainActivity
 import com.our.tripteller.R
 import com.our.tripteller.data.HomeData
 import com.our.tripteller.data.RegionData
-import com.our.tripteller.ui.home.Detail.DetailActivity
-import com.our.tripteller.ui.home.Filter.FilterActivity
+import com.our.tripteller.ui.home.detail.DetailActivity
+import com.our.tripteller.ui.home.filter.FilterActivity
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
@@ -40,8 +40,9 @@ class MainFragment : Fragment() {
         rv_region.addItemDecoration(ItemDecoration(this.context!!, 8,0))
         loadRegionDatas()
 
-        homeAdapter = HomeAdapter(view.context) { view: View ->
+        homeAdapter = HomeAdapter(view.context) { HomeData, view: View ->
             var intent = Intent(activity as MainActivity, DetailActivity::class.java)
+            intent.putExtra("idx", HomeData.id)
             startActivity(intent)
         }
         rv_home.adapter = homeAdapter
@@ -81,11 +82,11 @@ class MainFragment : Fragment() {
 
     private fun loadHomeDatas() {
         homeData.apply {
-            add (HomeData(mainimg = "https://images.unsplash.com/photo-1525183995014-bd94c0750cd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80", region = "부산", intro = "해운대 24년 거주 부산 토박이의\n맛집 여행기 들어보실래요?", tag = "커플여행"))
-            add (HomeData(mainimg = "https://images.unsplash.com/photo-1571645639045-a3d43f4cafc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80", region = "제주도", intro = "해운대 24년 거주 부산 토박이의\n맛집 여행기 들어보실래요?", tag = "커플여행"))
-            add (HomeData(mainimg = "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", region = "강원도", intro = "해운대 24년 거주 부산 토박이의\n맛집 여행기 들어보실래요?", tag = "커플여행"))
-            add (HomeData(mainimg = "https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", region = "서울", intro = "해운대 24년 거주 부산 토박이의\n맛집 여행기 들어보실래요?", tag = "커플여행"))
-            add (HomeData(mainimg = "https://images.unsplash.com/photo-1549194400-06e6874c2fd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80", region = "부산", intro = "해운대 24년 거주 부산 토박이의\n맛집 여행기 들어보실래요?", tag = "커플여행"))
+            add (HomeData(id = 0, mainimg = "https://images.unsplash.com/photo-1570515137767-8ac25a5b10fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1821&q=80", region = "서울", intro = "송리단길, 잠실은 이미 내\n나와바리! 웰컴 투 잠실라빔~", tag1 = "맛집투어", tag2 = "유흥", tag3 = "커플여행"))
+            add (HomeData(id = 1, mainimg = "https://images.unsplash.com/photo-1571645639045-a3d43f4cafc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80", region = "서울", intro = "음악을 즐기는\n프로서울러의 가로수길 투어", tag1 = "나홀로여행", tag2 = "맛집투어", tag3 = "유흥"))
+            add (HomeData(id = 2, mainimg = "https://images.unsplash.com/photo-1595737335975-2160c924caf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", region = "제주도", intro = "최연소 해녀가 추천하는\n제주도 바다투어 드루와 드루와", tag1 = "인생샷", tag2 = "자연", tag3 = "드라이브"))
+            add (HomeData(id = 3, mainimg = "https://images.unsplash.com/photo-1599025847646-58d2a1808824?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80", region = "강원도", intro = "예비 한의사가 추천하는\n구수한 원주 나들이", tag1 = "가족여행", tag2 = "자연", tag3 = "드라이브"))
+            add (HomeData(id = 4, mainimg = "https://images.unsplash.com/photo-1562601579-599dec564e06?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", region = "서울", intro = "쇼미더머니 출신 힙합러와\n함께하는 을지로 투어", tag1 = "유흥", tag2 = "맛집투어", tag3 = "예술"))
         }
         homeAdapter.datas = homeData
         homeAdapter.notifyDataSetChanged()

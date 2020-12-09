@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.home.Detail
+package com.our.tripteller.ui.home.detail
 
 import android.content.Context
 import android.view.LayoutInflater
