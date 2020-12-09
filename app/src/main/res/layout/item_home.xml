@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/img_card_blank"
         android:foreground="@drawable/foregroundimg"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:riv_corner_radius="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

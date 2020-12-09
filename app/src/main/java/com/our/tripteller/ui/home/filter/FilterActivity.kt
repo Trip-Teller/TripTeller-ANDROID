@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.home.Filter
+package com.our.tripteller.ui.home.filter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

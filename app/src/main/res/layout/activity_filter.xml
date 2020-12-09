@@ -8,7 +8,7 @@
     android:paddingStart="19dp"
     android:clipToPadding="false"
     android:paddingBottom="20dp"
-    tools:context=".ui.home.Filter.FilterActivity">
+    tools:context=".ui.home.filter.FilterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
