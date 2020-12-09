@@ -14,7 +14,6 @@
         <activity android:name=".ui.mypage.ApplyFilterActivity"></activity>
         <activity android:name=".ui.mypage.ApplyRegionActivity" />
         <activity android:name=".ui.sign.ProfileActivity" />
-        <activity android:name=".ui.sign.SigninActivity" />
         <activity android:name=".ui.sign.SignupActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
