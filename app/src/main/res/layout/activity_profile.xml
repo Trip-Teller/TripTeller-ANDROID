@@ -62,6 +62,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/iceblue_roundbox_24"
         android:gravity="center"
+        android:singleLine="true"
         android:hint="별명을 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
