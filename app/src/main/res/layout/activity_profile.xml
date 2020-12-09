@@ -47,6 +47,13 @@
             android:src="@drawable/grey_circle" />
 
         <ImageView
+            android:id="@+id/act_profile_image_raspberry"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:src="@drawable/raspberry_circle_stroke"
+            android:visibility="invisible"/>
+
+        <ImageView
             android:id="@+id/act_profile_noimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
