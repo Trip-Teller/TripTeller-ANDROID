@@ -39,8 +39,9 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,8 +102,8 @@
                 android:id="@+id/btn_picture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_filter_picture"
                 android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_picture"
                 app:layout_constraintStart_toEndOf="@+id/btn_dish"
                 app:layout_constraintTop_toTopOf="@+id/btn_dish" />
 
@@ -110,8 +111,8 @@
                 android:id="@+id/btn_nature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_filter_nature"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_nature"
                 app:layout_constraintStart_toStartOf="@+id/btn_shopping"
                 app:layout_constraintTop_toBottomOf="@+id/btn_shopping" />
 
@@ -128,8 +129,8 @@
                 android:id="@+id/btn_art"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_filter_art"
                 android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_art"
                 app:layout_constraintStart_toEndOf="@+id/btn_pleasure"
                 app:layout_constraintTop_toTopOf="@+id/btn_pleasure" />
 
@@ -173,8 +174,8 @@
                 android:id="@+id/btn_family"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_filter_family"
                 android:layout_marginTop="8dp"
+                android:src="@drawable/selector_filter_family"
                 app:layout_constraintStart_toStartOf="@+id/btn_parents"
                 app:layout_constraintTop_toBottomOf="@+id/btn_parents" />
 
@@ -191,8 +192,8 @@
                 android:id="@+id/btn_walker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_filter_walker"
                 android:layout_marginStart="8dp"
+                android:src="@drawable/selector_filter_walker"
                 app:layout_constraintStart_toEndOf="@+id/btn_iconomy"
                 app:layout_constraintTop_toTopOf="@+id/btn_iconomy" />
 

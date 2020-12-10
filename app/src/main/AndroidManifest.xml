@@ -13,6 +13,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.sign.DatePickerActivity" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
         <activity android:name=".ui.mypage.ApplyFilterActivity" />
+        <activity android:name=".ui.home.detail.RequestActivity"></activity>
+        <activity android:name=".ui.mypage.ApplyImageActivity" />
+        <activity android:name=".ui.mypage.ApplyIntroductionActivity" />
+        <activity android:name=".ui.mypage.ApplyFilterActivity" />
         <activity android:name=".ui.mypage.ApplyRegionActivity" />
         <activity android:name=".ui.sign.ProfileActivity" />
         <activity android:name=".ui.sign.SignupActivity" />
@@ -25,10 +29,10 @@
         </activity>
         <activity android:name=".TermsActivity" />
         <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity" />
-        <activity android:name=".ui.home.Filter.FilterActivity" />
+        <activity android:name=".ui.home.filter.FilterActivity" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".ui.home.Detail.DetailActivity"
+            android:name=".ui.home.detail.DetailActivity"
             android:theme="@style/noStatus" />
     </application>
 

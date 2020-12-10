@@ -4,13 +4,13 @@
     android:id="@+id/popup_logout"
     android:layout_width="328dp"
     android:layout_height="wrap_content"
+    android:paddingTop="24dp"
     android:background="@drawable/white_roundbox_16">
 
     <ImageView
         android:id="@+id/iv_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:src="@drawable/ic_withdrawal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

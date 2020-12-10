@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.view.View
 import android.view.Window
 import android.widget.Button
 import kotlinx.android.synthetic.main.popup_custom.*
@@ -21,7 +22,12 @@ class CustomDialog(context : Context){
         dlg.setCancelable(false)    //다이얼로그의 바깥 화면을 눌렀을 때 다이얼로그가 닫히지 않도록 함
         dlg?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //색 투명하게
 
-        dlg.iv_icon.setImageResource(img)
+        if(img == 0){
+            dlg.iv_icon.visibility = View.GONE
+        }
+        else {
+            dlg.iv_icon.setImageResource(img)
+        }
         dlg.tv_content.text = content
         dlg.btn_ok.text = okText
         dlg.btn_cancel.text = cancelText

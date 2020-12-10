@@ -1,5 +1,6 @@
 package com.our.tripteller.ui.mypage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.our.tripteller.R
@@ -10,7 +11,11 @@ class ApplyFilterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_apply_filter)
 
-
+        btn_next.setOnClickListener {
+            val intent = Intent(this, ApplyIntroductionActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         btn_activity.setOnClickListener {
             btn_activity.isSelected = !btn_activity.isSelected

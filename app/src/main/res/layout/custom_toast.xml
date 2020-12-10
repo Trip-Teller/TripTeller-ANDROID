@@ -12,7 +12,7 @@
         android:fontFamily="@font/notosanskr"
         android:gravity="center_horizontal"
         android:includeFontPadding="false"
-        android:background="@drawable/white_roundbox_16"
+        android:background="@drawable/white_shadow_roundbox_16"
         android:text="💦\n회원탈퇴가 완료되었습니다."
         android:textColor="@color/black"
         android:textFontWeight="400"

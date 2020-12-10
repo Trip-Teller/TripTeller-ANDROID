@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.sign.SigninActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_signin_top"
@@ -49,7 +50,6 @@
             android:layout_marginTop="54dp"
             android:background="@drawable/iceblue_roundbox_24"
             android:hint="아이디를 입력해주세요"
-            android:singleLine="true"
             android:paddingHorizontal="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,6 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/iceblue_roundbox_24"
             android:hint="비밀번호를 입력해주세요 "
-            android:singleLine="true"
             android:inputType="textPassword"
             android:paddingHorizontal="24dp"
             app:layout_constraintEnd_toEndOf="parent"

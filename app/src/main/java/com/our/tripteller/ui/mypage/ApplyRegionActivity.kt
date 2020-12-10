@@ -14,6 +14,7 @@ class ApplyRegionActivity : AppCompatActivity() {
         btn_next.setOnClickListener {
             val intent = Intent(this, ApplyFilterActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
