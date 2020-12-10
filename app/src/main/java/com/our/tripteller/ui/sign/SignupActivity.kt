@@ -21,6 +21,14 @@ class SignupActivity : AppCompatActivity() {
         var pwd2 = false
         var same = false
 
+        act_signup_edit_id.addTextChangedListener(object :TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                act_signup_edit_id.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+            }
+        })
+
         act_signup_edit_pwd1.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) = Unit
 
