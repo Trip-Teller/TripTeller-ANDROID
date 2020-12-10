@@ -2,6 +2,8 @@ package com.our.tripteller.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.view.animation.TranslateAnimation
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +11,7 @@ import com.our.tripteller.MainActivity
 import com.our.tripteller.R
 import com.our.tripteller.data.IMAGES_RESOURCE
 import com.our.tripteller.ui.sign.SignupActivity
+import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.android.synthetic.main.layout_signin.*
 import kotlinx.android.synthetic.main.layout_signin.act_signin_btn
@@ -48,6 +51,25 @@ class SplashActivity : AppCompatActivity() {
             act_splash_btn_signin.isClickable = false
             act_splash_btn_justlook.isClickable = false
             act_splash_btn_signup.isClickable = false
+
+            act_signin_edit_id.addTextChangedListener(object : TextWatcher {
+                override fun afterTextChanged(p0: Editable?) {}
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    act_signin_edit_id.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signin_text_fail.visibility = View.GONE
+                }
+            })
+
+            act_signin_edit_pwd.addTextChangedListener(object : TextWatcher {
+                override fun afterTextChanged(p0: Editable?) {}
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    act_signin_edit_pwd.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signin_text_fail.visibility = View.GONE
+                }
+            })
+
 
             act_signin_btn_check.setOnClickListener {
                 act_signin_btn_check.isSelected = !act_signin_btn_check.isSelected
