@@ -47,6 +47,13 @@
             android:src="@drawable/grey_circle" />
 
         <ImageView
+            android:id="@+id/act_profile_image_raspberry"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:src="@drawable/raspberry_circle_stroke"
+            android:visibility="invisible" />
+
+        <ImageView
             android:id="@+id/act_profile_noimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,41 +70,107 @@
         android:background="@drawable/iceblue_roundbox_24"
         android:gravity="center"
         android:hint="별명을 입력해주세요"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
-
-    <Spinner
-        android:id="@+id/act_profile_spinner_age"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="137dp"
-        android:layout_marginTop="19dp"
-        android:spinnerMode="dialog"
-        android:paddingLeft="17dp"
-        android:background="@drawable/iceblue_roundbox_24"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_profile_edit_nickname" />
-
-    <TextView
-        android:id="@+id/textView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/act_profile_const"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        android:includeFontPadding="false"
-        android:text="나이"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/act_profile_spinner_age"
-        app:layout_constraintEnd_toStartOf="@+id/act_profile_spinner_age"
-        app:layout_constraintTop_toTopOf="@+id/act_profile_spinner_age" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/act_profile_edit_nickname">
+
+        <TextView
+            android:id="@+id/act_profile_text_year"
+            android:layout_width="83dp"
+            android:layout_height="48dp"
+            android:background="@drawable/iceblue_roundbox_24"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="년"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_year"
+            app:layout_constraintStart_toEndOf="@+id/act_profile_text_year"
+            app:layout_constraintTop_toTopOf="@+id/act_profile_text_year" />
+
+        <TextView
+            android:id="@+id/act_profile_text_month"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="137dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/iceblue_roundbox_24"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_year"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/act_profile_text_year" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="월"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_month"
+            app:layout_constraintStart_toEndOf="@+id/act_profile_text_month"
+            app:layout_constraintTop_toTopOf="@+id/act_profile_text_month" />
+
+        <TextView
+            android:id="@+id/act_profile_text_day"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="137dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/iceblue_roundbox_24"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_month"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="@+id/act_profile_text_month"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="일생 "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/act_profile_text_day"
+            app:layout_constraintTop_toTopOf="@+id/act_profile_text_day" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
@@ -118,7 +191,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_profile_spinner_age">
+        app:layout_constraintTop_toBottomOf="@+id/act_profile_const">
 
         <TextView
             android:id="@+id/act_profile_btn_women"
