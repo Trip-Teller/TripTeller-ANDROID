@@ -86,5 +86,8 @@ dependencies {
     //움직이는 splash
     implementation 'com.github.goka.kenburnsview:library:1.0.3'
 
+    //date picker spinner
+    implementation 'com.github.Ibotta:Supported-Picker-Dialogs:1.0.0'
+
 
 }

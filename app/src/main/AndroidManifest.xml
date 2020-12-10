@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.mypage.ApplyFilterActivity"></activity>
+        <activity android:name=".ui.sign.DatePickerActivity" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        <activity android:name=".ui.mypage.ApplyFilterActivity" />
         <activity android:name=".ui.mypage.ApplyRegionActivity" />
         <activity android:name=".ui.sign.ProfileActivity" />
         <activity android:name=".ui.sign.SignupActivity" />

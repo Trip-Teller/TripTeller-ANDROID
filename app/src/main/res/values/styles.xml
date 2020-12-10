@@ -9,6 +9,8 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowBackground">@color/white</item>
+        <item name="android:datePickerMode">spinner</item>
+
     </style>
 
     <style name="noStatus" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -38,6 +40,16 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="SpinnerTimePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- android:timePickerStyle was not added until API 21 -->
+        <item name="android:timePickerStyle">@style/TimePickerStyle</item>
+    </style>
+
+    <style name="TimePickerStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
     </style>
 
 </resources>
