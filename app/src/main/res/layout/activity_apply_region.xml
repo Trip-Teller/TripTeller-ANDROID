@@ -39,8 +39,9 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -80,8 +81,8 @@
                     android:id="@+id/btn_seoul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/selector_region_seoul"
                     android:layout_marginTop="8dp"
+                    android:background="@drawable/selector_region_seoul"
                     android:button="@null" />
 
                 <RadioButton

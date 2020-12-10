@@ -1,5 +1,6 @@
 package com.our.tripteller.ui.home.detail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +26,11 @@ class DetailActivity : AppCompatActivity() {
 
         if (intent.hasExtra("idx")) {
             idx = intent.getIntExtra("idx",0)
+        }
+
+        btn_consulting.setOnClickListener{
+            val intent = Intent(this, RequestActivity::class.java)
+            startActivity(intent)
         }
 
         loadData()

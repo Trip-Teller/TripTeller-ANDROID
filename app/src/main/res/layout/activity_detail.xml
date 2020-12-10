@@ -34,7 +34,7 @@
                     android:fitsSystemWindows="true"
                     android:foreground="@color/black_30"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/busan"
+                    android:src="@drawable/picture_1"
                     app:layout_collapseMode="parallax"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -281,6 +281,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <ImageView
+        android:id="@+id/btn_consulting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
