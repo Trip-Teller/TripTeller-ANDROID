@@ -43,8 +43,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/act_profile_image"
             android:layout_width="104dp"
-            android:layout_height="104dp"
-            android:src="@drawable/grey_circle" />
+            android:layout_height="104dp" />
 
         <ImageView
             android:id="@+id/act_profile_image_raspberry"
@@ -58,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/qna_btn_add_photo" />
+            android:src="@drawable/btn_add_photo" />
     </FrameLayout>
 
     <EditText
@@ -91,6 +90,7 @@
             android:background="@drawable/iceblue_roundbox_24"
             android:gravity="center"
             android:spinnerMode="dialog"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -119,6 +119,7 @@
             android:background="@drawable/iceblue_roundbox_24"
             android:gravity="center"
             android:spinnerMode="dialog"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_year"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="@+id/act_profile_text_year" />
@@ -147,6 +148,7 @@
             android:background="@drawable/iceblue_roundbox_24"
             android:gravity="center"
             android:spinnerMode="dialog"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/act_profile_text_month"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toTopOf="@+id/act_profile_text_month"

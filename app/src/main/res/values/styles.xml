@@ -19,6 +19,12 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="transparentStatus" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="TextStyle3">

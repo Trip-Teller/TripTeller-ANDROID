@@ -1,10 +1,12 @@
 package com.our.tripteller.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.WindowManager
 import android.view.animation.TranslateAnimation
 import androidx.appcompat.app.AppCompatActivity
 import com.our.tripteller.MainActivity
@@ -23,11 +25,20 @@ import kotlinx.android.synthetic.main.layout_signin.act_signin_text_fail
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        window.apply {
+            clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            statusBarColor = Color.TRANSPARENT
+        }
+
         setContentView(R.layout.activity_splash)
 
         val datas = IMAGES_RESOURCE
 
         layout_signin.visibility = View.INVISIBLE
+        act_signin_btn_check.isSelected = true
 
 
         val rnds = (datas.indices).random()
@@ -36,6 +47,7 @@ class SplashActivity : AppCompatActivity() {
         layout_signin_top.setOnClickListener {
             slideDown(layout_signin)
             act_splash_img.visibility = View.VISIBLE
+            act_splash_logo.visibility = View.VISIBLE
 
             act_splash_btn_signin.isClickable = true
             act_splash_btn_justlook.isClickable = true
@@ -47,6 +59,7 @@ class SplashActivity : AppCompatActivity() {
 
             slideUp(layout_signin)
             act_splash_img.visibility = View.INVISIBLE
+            act_splash_logo.visibility = View.INVISIBLE
 
             act_splash_btn_signin.isClickable = false
             act_splash_btn_justlook.isClickable = false
