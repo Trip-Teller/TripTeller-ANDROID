@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.chat.ChatRoom
+package com.our.tripteller.ui.chat.chatroom
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.our.tripteller.R
 import com.our.tripteller.data.MessageData
@@ -39,6 +38,10 @@ class ChatRoomActivity : AppCompatActivity() {
 
 //        myChatAdapter = MyChatAdapter(this)
 //        youChatAdapter = YouChatAdapter(this)
+
+        if (intent.hasExtra("nickname")) {
+            tv_nickname.text = intent.getStringExtra("nickname")
+        }
 
         chatAdapter = ChatAdapter(messageData)
 

@@ -4,10 +4,12 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.our.tripteller.CustomDialog
 import com.our.tripteller.R
-import com.our.tripteller.ui.chat.ChatRoom.ChatRoomActivity
+import com.our.tripteller.ui.chat.chatroom.ChatRoomActivity
 import kotlinx.android.synthetic.main.activity_request.*
+import kotlinx.android.synthetic.main.activity_request.tv_nickname
 import java.util.*
 
 class RequestActivity : AppCompatActivity() {
@@ -18,10 +20,20 @@ class RequestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request)
 
+        if (intent.hasExtra("profile")) {
+            val profile =  intent.getStringExtra("profile")
+            Glide.with(this).load(profile).into(civ_profile)
+            tv_nickname.text = intent.getStringExtra("nickname")
+            tv_age.text = intent.getStringExtra("age")
+            tv_gender.text = intent.getStringExtra("gender")
+
+        }
+
         btn_fin.setOnClickListener {
             val customDialog = CustomDialog(this)
             customDialog.setOnOKClickedListener {
                 val intent = Intent(this, ChatRoomActivity::class.java)
+                intent.putExtra("nickname",tv_nickname.text)
                 startActivity(intent)
                 finish()
             }
@@ -30,7 +42,7 @@ class RequestActivity : AppCompatActivity() {
 
         tv_start.setOnClickListener {
             DatePickerDialog(this, DatePickerDialog.OnDateSetListener{datePicker, year, month, day ->
-                tv_start.text = (month+1).toString() + "월" + day.toString() + "일"
+                tv_start.text = (month+1).toString() + "월 " + day.toString() + "일"
             }, cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DATE)).show();
 
         }

@@ -1,4 +1,4 @@
-package com.our.tripteller.ui.chat.ChatRoom
+package com.our.tripteller.ui.chat.chatroom
 
 
 import android.view.LayoutInflater
