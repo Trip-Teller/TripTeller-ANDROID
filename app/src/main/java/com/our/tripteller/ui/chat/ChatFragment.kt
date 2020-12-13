@@ -6,11 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatDelegate
 import com.our.tripteller.MainActivity
 import com.our.tripteller.R
 import com.our.tripteller.data.ChatListData
-import com.our.tripteller.ui.chat.ChatRoom.ChatRoomActivity
+import com.our.tripteller.ui.chat.chatroom.ChatRoomActivity
 import kotlinx.android.synthetic.main.fragment_chat.*
 
 class ChatFragment : Fragment() {

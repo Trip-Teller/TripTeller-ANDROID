@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_tripteller_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_tripteller_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.sign.DatePickerActivity" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TermsActivity" />
-        <activity android:name=".ui.chat.ChatRoom.ChatRoomActivity" />
+        <activity android:name=".ui.chat.chatroom.ChatRoomActivity" />
         <activity android:name=".ui.home.filter.FilterActivity" />
         <activity android:name=".MainActivity" />
         <activity

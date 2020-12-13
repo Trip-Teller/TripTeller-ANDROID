@@ -8,16 +8,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.our.tripteller.R
 
-class DetailHashtagAdapter (private val context: Context): RecyclerView.Adapter<DetailHashtagViewHolder>(){
+class DetailHashtagAdapter (private val context: Context, private val tag1: String, private val tag2: String, private val tag3: String): RecyclerView.Adapter<DetailHashtagViewHolder>(){
 
     data class HashtagData(
         val hashtagData: String
     )
 
     var datas = arrayListOf<HashtagData>(
-        HashtagData("효도여행"),
-        HashtagData("맛집투어"),
-        HashtagData("힐링")
+        HashtagData(tag1),
+        HashtagData(tag2),
+        HashtagData(tag3)
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailHashtagViewHolder {
