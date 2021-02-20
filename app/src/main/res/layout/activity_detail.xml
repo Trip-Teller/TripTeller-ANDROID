@@ -44,39 +44,163 @@
                     android:id="@+id/tv_region"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="143dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:background="@drawable/black_roundbox_3"
+                    android:fontFamily="@font/notosanskr"
                     android:includeFontPadding="false"
+                    android:paddingHorizontal="6dp"
+                    android:paddingBottom="2dp"
                     android:text="부산"
-                    android:textColor="@color/tripteller_grey_04_2"
-                    android:textSize="15sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
                     app:layout_collapseMode="pin"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintBottom_toTopOf="@+id/tv_intro1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_intro1" />
 
                 <TextView
-                    android:id="@+id/tv_intro"
+                    android:id="@+id/tv_intro1"
                     style="@style/TextStyle3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:background="@drawable/home_intro_1"
+                    android:fontFamily="@font/notosanskr"
                     android:includeFontPadding="false"
-                    android:text="해운대 24년 거주 부산 토박이의 \n맛집 여행기 들어보실래요?"
+                    android:paddingHorizontal="4dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="해운대 24주년 거주 부산 토박이의"
                     android:textColor="@color/white"
-                    app:layout_constraintStart_toStartOf="@+id/act_detail_rv_hashtag"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_region" />
+                    android:textFontWeight="400"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_intro2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_intro2" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/act_detail_rv_hashtag"
+                <TextView
+                    android:id="@+id/tv_intro2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="18dp"
-                    app:layout_constraintStart_toStartOf="@+id/iv_mainimg"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_intro"
-                    tools:itemCount="1"
-                    tools:listitem="@layout/item_detail_hashtag" />
+                    android:background="@drawable/home_intro_2"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="5dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="맛집 여행기 들어보실래요?"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_tag1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_tag1" />
+
+                <TextView
+                    android:id="@+id/tv_tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="7dp"
+                    android:text="#커플여행"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_tag4"/>
+
+                <TextView
+                    android:id="@+id/tv_tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:text="#맛집투어"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag1" />
+
+                <TextView
+                    android:id="@+id/tv_tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:text="#힐링"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag2" />
+
+                <TextView
+                    android:id="@+id/tv_tag_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:text="#힐링"
+                    android:visibility="invisible"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag3"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag3" />
+
+                <TextView
+                    android:id="@+id/tv_tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:text="#쇼핑"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/transparent"
+                    app:layout_constraintStart_toStartOf="@+id/iv_mainimg" />
+
+                <TextView
+                    android:id="@+id/tv_tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="8dp"
+                    android:text="#효도여행"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag4"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag4" />
+
+                <TextView
+                    android:id="@+id/tv_tag6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="8dp"
+                    android:text="#드라이브"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag5"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag5" />
+
+                <View
+                    android:id="@+id/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="33dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
