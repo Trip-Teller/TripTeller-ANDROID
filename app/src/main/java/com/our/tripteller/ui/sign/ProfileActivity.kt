@@ -1,26 +1,15 @@
 package com.our.tripteller.ui.sign
 
-import android.app.Activity
-import android.app.Instrumentation
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.our.tripteller.MainActivity
 import com.our.tripteller.R
 import kotlinx.android.synthetic.main.activity_profile.*
-import java.io.InputStream
-
 
 class ProfileActivity : AppCompatActivity() {
 
-    val REQUEST_CODE = 0
-
-    var profile_img = false
     var nick = false
     var age = false
     var sex = false
@@ -28,14 +17,6 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
-
-        //이미지 설정
-        act_profile_image.setOnClickListener {
-            val intent = Intent()
-            intent.type = "image/*"
-            intent.action = Intent.ACTION_GET_CONTENT
-            startActivityForResult(intent, REQUEST_CODE)
-        }
 
         //닉네임 설정
         act_profile_edit_nickname.addTextChangedListener(object : TextWatcher {
@@ -46,7 +27,7 @@ class ProfileActivity : AppCompatActivity() {
                 count: Int
             ) {
                 // 입력난에 변화가 있을 시 조치
-                act_profile_edit_nickname.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                act_profile_edit_nickname.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
             }
 
             override fun afterTextChanged(arg0: Editable) {
@@ -66,7 +47,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         //나이 설정
-        act_profile_const.setOnClickListener {
+        act_profile_const1.setOnClickListener {
             val intent = Intent(this, DatePickerActivity::class.java)
             startActivityForResult(intent, 200)
         }
@@ -97,78 +78,50 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         //완료 버튼
-        act_profile_btn_done.setOnClickListener {
-
-            if (!profile_img) {
-                act_profile_image_raspberry.visibility = View.VISIBLE
-            }
+        act_profile_btn_next.setOnClickListener {
 
             nick = if (act_profile_edit_nickname.text.isNullOrBlank()) {
-                act_profile_edit_nickname.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                act_profile_edit_nickname.setBackgroundResource(R.drawable.raspberry_stroke_3)
                 false
             } else {
-                act_profile_edit_nickname.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                act_profile_edit_nickname.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                 true
             }
 
             if (act_profile_text_year.text == "") {
-                act_profile_text_year.setBackgroundResource(R.drawable.raspberry_stroke_24)
-                act_profile_text_month.setBackgroundResource(R.drawable.raspberry_stroke_24)
-                act_profile_text_day.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                act_profile_text_year.setBackgroundResource(R.drawable.raspberry_stroke_3)
+                act_profile_text_month.setBackgroundResource(R.drawable.raspberry_stroke_3)
+                act_profile_text_day.setBackgroundResource(R.drawable.raspberry_stroke_3)
                 age = false
             }
 
             if (!act_profile_btn_women.isSelected && !act_profile_btn_man.isSelected) {
-                act_profile_btn_women.setBackgroundResource(R.drawable.raspberry_stroke_24)
-                act_profile_btn_man.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                act_profile_btn_women.setBackgroundResource(R.drawable.raspberry_stroke_3)
+                act_profile_btn_man.setBackgroundResource(R.drawable.raspberry_stroke_3)
             }
             sex = act_profile_btn_women.isSelected || act_profile_btn_man.isSelected
 
-            if (profile_img && nick && age && sex) {
-                val intent = Intent(this, MainActivity::class.java)
+            if (nick && age && sex) {
+                val intent = Intent(this, ProfileImageActivity::class.java)
                 startActivity(intent)
-                finish()
+//                finish()
             }
         }
 
     }
 
-
-    //갤러리에서 이미지 가져오기
+    //set date picker
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode === REQUEST_CODE) {
-            if (resultCode === Activity.RESULT_OK) {
-                try {
-                    val `in`: InputStream? =
-                        data?.data?.let { contentResolver.openInputStream(it) }
-                    val img = BitmapFactory.decodeStream(`in`)
-                    `in`?.close()
-
-                    act_profile_image.setImageBitmap(img)
-
-                    act_profile_noimage.visibility = View.INVISIBLE
-                    act_profile_image_raspberry.visibility = View.INVISIBLE
-
-                    profile_img = true
-                } catch (e: Exception) {
-                }
-            } else if (resultCode === Activity.RESULT_CANCELED) {
-                Toast.makeText(this, "사진 선택 취소", Toast.LENGTH_LONG).show()
-                profile_img = false
-
-            }
-        }
-
-        if (requestCode == 200 && resultCode == 777){
+        if (requestCode == 200){
             act_profile_text_year.text = data?.getIntExtra("year", 0).toString()
             act_profile_text_month.text = data?.getIntExtra("month", 0).toString()
             act_profile_text_day.text = data?.getIntExtra("day", 0).toString()
 
-            act_profile_text_year.setBackgroundResource(R.drawable.iceblue_roundbox_24)
-            act_profile_text_month.setBackgroundResource(R.drawable.iceblue_roundbox_24)
-            act_profile_text_day.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+            act_profile_text_year.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
+            act_profile_text_month.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
+            act_profile_text_day.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
 
             age = true
         }

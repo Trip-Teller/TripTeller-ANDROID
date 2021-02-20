@@ -28,7 +28,7 @@
         android:maxWidth="236dp"
         android:padding="8dp"
         android:text="상대가 입력한 내용"
-        android:textColor="@color/black"
+        android:textColor="@color/tripteller_black"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/chat_You_Image"
