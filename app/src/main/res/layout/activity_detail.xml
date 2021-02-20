@@ -51,7 +51,7 @@
                     android:paddingBottom="2dp"
                     android:text="부산"
                     android:layout_marginBottom="10dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="500"
                     android:textSize="14dp"
                     app:layout_collapseMode="pin"
@@ -70,7 +70,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="해운대 24주년 거주 부산 토박이의"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="18dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_intro2"
@@ -87,7 +87,7 @@
                     android:paddingBottom="4dp"
                     android:layout_marginBottom="8dp"
                     android:text="맛집 여행기 들어보실래요?"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="18dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_tag1"
@@ -101,7 +101,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginBottom="7dp"
                     android:text="#커플여행"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     android:layout_marginStart="24dp"
@@ -115,7 +115,7 @@
                     android:fontFamily="@font/notosanskr"
                     android:includeFontPadding="false"
                     android:text="#맛집투어"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     android:layout_marginStart="8dp"
@@ -129,7 +129,7 @@
                     android:fontFamily="@font/notosanskr"
                     android:includeFontPadding="false"
                     android:text="#힐링"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     android:layout_marginStart="8dp"
@@ -144,7 +144,7 @@
                     android:includeFontPadding="false"
                     android:text="#힐링"
                     android:visibility="invisible"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     android:layout_marginStart="8dp"
@@ -159,7 +159,7 @@
                     android:fontFamily="@font/notosanskr"
                     android:includeFontPadding="false"
                     android:text="#쇼핑"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toTopOf="@+id/transparent"
@@ -173,7 +173,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginStart="8dp"
                     android:text="#효도여행"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     app:layout_constraintStart_toEndOf="@+id/tv_tag4"
@@ -187,7 +187,7 @@
                     android:includeFontPadding="false"
                     android:layout_marginStart="8dp"
                     android:text="#드라이브"
-                    android:textColor="@color/white"
+                    android:textColor="@color/tripteller_white"
                     android:textFontWeight="400"
                     android:textSize="14dp"
                     app:layout_constraintStart_toEndOf="@+id/tv_tag5"
@@ -253,7 +253,7 @@
                     android:fontFamily="@font/noto_sans_kr_bold"
                     android:includeFontPadding="false"
                     android:text="위어트립텔러"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_age"
                     app:layout_constraintStart_toEndOf="@+id/view"
@@ -309,7 +309,7 @@
                 android:fontFamily="@font/noto_sans_kr_bold"
                 android:includeFontPadding="false"
                 android:text="마, 이게 붓싼이다! "
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -326,7 +326,7 @@
 그리고 사실... 저는 부산 출신이 아니랍니다!!(폭탄발언) 저는 사실 서울 사람이라구요! 이렇게 오늘도 여러 사람을 낚고 갑니다. 하하.\n\n
 
 아무튼 좋은 여행을 위해 제가 컨설팅을 해 드리겠습니다. 부산은 돼지국밥에 정구지 팍팍 넣어 먹는게 제맛인데 말이죠. 부산이 그립네요... 후우... 진수야.. 잘 지내니...?"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
@@ -345,7 +345,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/noto_sans_kr_bold"
                     android:text="추천맛집 🥘"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -356,7 +356,7 @@
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:lineSpacingExtra="8sp"
                     android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!\n장소는 부산광역시 해운대구 00-000 랍니다!"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="16sp" />
 
                 <TextView
@@ -365,7 +365,7 @@
                     android:layout_marginTop="28dp"
                     android:fontFamily="@font/noto_sans_kr_bold"
                     android:text="추천카페 ☕️"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -377,7 +377,7 @@
                     android:lineSpacingExtra="8sp"
                     android:text="해운대가 훤히 보이는 OO카페를 추천드려요~\n
 뷰가 아주 좋답니다 ㅎㅎ 여기서 대판 싸웠던 고등학교 동창들과 화해했던 기억이 나네요!"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="16sp"
                     android:textStyle="normal" />
 
@@ -387,7 +387,7 @@
                     android:layout_marginTop="28dp"
                     android:fontFamily="@font/noto_sans_kr_bold"
                     android:text="추천명소 🏝️"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -398,7 +398,7 @@
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:lineSpacingExtra="8sp"
                     android:text="저는 다대포 해수욕장을 추천드려요! 전세계에서 가장 아름다운 낙조를 보실 수 있을 거예요. 아주 로맨틱해서 프로포즈 장소로도 손색이 없죠!"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tripteller_black"
                     android:textSize="16sp" />
             </LinearLayout>
 

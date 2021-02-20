@@ -15,7 +15,6 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-
         var id = false
         var pwd1 = false
         var pwd2 = false
@@ -25,7 +24,7 @@ class SignupActivity : AppCompatActivity() {
             override fun afterTextChanged(p0: Editable?) {}
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                act_signup_edit_id.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                act_signup_edit_id.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
             }
         })
 
@@ -36,11 +35,11 @@ class SignupActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if(s?.length!! < 5){
-                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     act_signup_text_pwdLengh.visibility = View.VISIBLE
                 }
                 else{
-                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     act_signup_text_pwdLengh.visibility = View.GONE
                 }
             }
@@ -49,38 +48,41 @@ class SignupActivity : AppCompatActivity() {
         act_signup_btn.setOnClickListener {
 
             id = if (act_signup_edit_id.text.isNullOrBlank()) {
-                act_signup_edit_id.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                act_signup_edit_id.setBackgroundResource(R.drawable.raspberry_stroke_3)
                 false
             } else {
-                act_signup_edit_id.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                act_signup_edit_id.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                 true
             }
 
             pwd1 =
                 if (act_signup_edit_pwd1.text.isNullOrBlank()) {
-                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     act_signup_text_pwdLengh.visibility = View.VISIBLE
                     false
                 } else {
-                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signup_edit_pwd1.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     act_signup_text_pwdLengh.visibility = View.GONE
                     true
                 }
 
             pwd2 = if (act_signup_edit_pwd2.text.isNullOrBlank()) {
-                act_signup_edit_pwd2.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                act_signup_edit_pwd2.setBackgroundResource(R.drawable.raspberry_stroke_3)
+                act_signup_text_recheck.visibility = View.VISIBLE
                 false
             } else {
-                act_signup_edit_pwd2.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                act_signup_edit_pwd2.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
+                act_signup_text_recheck.visibility = View.GONE
                 true
             }
 
             same =
                 if (!act_signup_edit_pwd2.text.isNullOrBlank() && act_signup_edit_pwd1.text.toString() == act_signup_edit_pwd2.text.toString()) {
-                    act_signup_edit_pwd2.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    act_signup_edit_pwd2.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     true
                 } else {
-                    act_signup_edit_pwd2.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    act_signup_edit_pwd2.setBackgroundResource(R.drawable.raspberry_stroke_3)
+                    act_signup_text_recheck.visibility = View.VISIBLE
                     false
                 }
 

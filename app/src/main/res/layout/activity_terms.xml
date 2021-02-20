@@ -19,7 +19,7 @@
             android:textFontWeight="700"
             android:includeFontPadding="false"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:text="이용약관"
             android:paddingStart="2dp"/>
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
         android:text="Subtitle01"
-        android:textColor="@color/black"
+        android:textColor="@color/tripteller_black"
         android:textSize="16sp"
         android:textFontWeight="500"
         android:includeFontPadding="false"

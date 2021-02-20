@@ -13,7 +13,7 @@
         android:fontFamily="@font/noto_sans_kr_medium"
         android:lineSpacingExtra="8.9sp"
         android:text="효도여행"
-        android:textColor="@color/white"
+        android:textColor="@color/tripteller_white"
         android:textSize="16sp"
         android:textStyle="normal"
         android:includeFontPadding="false"
