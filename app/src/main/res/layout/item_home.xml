@@ -17,6 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_gradation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_gradation"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_region"
         android:layout_width="wrap_content"
@@ -24,28 +34,46 @@
         android:fontFamily="@font/notosanskr"
         android:background="@drawable/black_roundbox_3"
         android:includeFontPadding="false"
-        android:layout_marginBottom="8dp"
-        android:paddingHorizontal="5dp"
-        android:paddingBottom="1dp"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="6dp"
+        android:paddingBottom="2dp"
         android:text="부산"
         android:textColor="@color/white"
         android:textFontWeight="500"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_intro"
-        app:layout_constraintStart_toStartOf="@+id/tv_intro" />
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_intro1"
+        app:layout_constraintStart_toStartOf="@+id/tv_intro1" />
 
     <TextView
-        android:id="@+id/tv_intro"
+        android:id="@+id/tv_intro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
-        android:background="@drawable/black_roundbox_3"
+        android:text="해운대 24주년 거주 부산 토박이의"
+        android:background="@drawable/home_intro_1"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:paddingHorizontal="4dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textFontWeight="400"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_intro2"
+        app:layout_constraintStart_toStartOf="@+id/tv_intro2" />
+
+    <TextView
+        android:id="@+id/tv_intro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr"
+        android:text="맛집 여행기 들어보실래요?"
+        android:background="@drawable/home_intro_2"
         android:includeFontPadding="false"
         android:textColor="@color/white"
         android:paddingHorizontal="5dp"
-        android:paddingBottom="1dp"
-        android:textFontWeight="300"
-        android:textSize="20dp"
+        android:paddingBottom="4dp"
+        android:textFontWeight="400"
+        android:textSize="18dp"
         android:layout_marginBottom="11dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_tag1"
         app:layout_constraintStart_toStartOf="@+id/tv_tag1" />
@@ -56,11 +84,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="7dp"
         android:text="#커플여행"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         android:layout_marginStart="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_tag4"/>
@@ -73,8 +101,8 @@
         android:includeFontPadding="false"
         android:text="#맛집투어"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/tv_tag1"
         app:layout_constraintTop_toTopOf="@+id/tv_tag1" />
@@ -87,11 +115,26 @@
         android:includeFontPadding="false"
         android:text="#힐링"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/tv_tag2"
         app:layout_constraintTop_toTopOf="@+id/tv_tag2" />
+
+    <TextView
+        android:id="@+id/tv_tag_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="#힐링"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="14dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tag3"
+        app:layout_constraintTop_toTopOf="@+id/tv_tag3" />
 
     <TextView
         android:id="@+id/tv_tag4"
@@ -102,8 +145,8 @@
         android:includeFontPadding="false"
         android:text="#쇼핑"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/transparent"
         app:layout_constraintStart_toStartOf="@+id/iv_mainimg" />
 
@@ -116,8 +159,8 @@
         android:layout_marginStart="8dp"
         android:text="#효도여행"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         app:layout_constraintStart_toEndOf="@+id/tv_tag4"
         app:layout_constraintTop_toTopOf="@+id/tv_tag4" />
 
@@ -130,8 +173,8 @@
         android:layout_marginStart="8dp"
         android:text="#드라이브"
         android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="16dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
         app:layout_constraintStart_toEndOf="@+id/tv_tag5"
         app:layout_constraintTop_toTopOf="@+id/tv_tag5" />
 
