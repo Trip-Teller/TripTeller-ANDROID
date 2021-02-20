@@ -12,7 +12,7 @@ class ApplyFilterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_apply_filter)
 
         btn_next.setOnClickListener {
-            val intent = Intent(this, ApplyIntroductionActivity::class.java)
+            val intent = Intent(this, ApplyImageActivity::class.java)
             startActivity(intent)
             finish()
         }
