@@ -68,11 +68,11 @@ class MainActivity : AppCompatActivity() {
                     setGravity(Gravity.CENTER, 0, 0)
                     duration = Toast.LENGTH_SHORT
                     view = layout
-                    view.toast_message.text = "✋\n로그아웃이 완료되었습니다."
+                    view.toast_message.text = "로그아웃이 완료되었습니다."
                     show()
                 }
             }
-            customDialog.start(R.drawable.ic_popup_logout,"정말 로그아웃 하시겠어요?","네, 할게요.", "아뇨, 안 해요!")
+            customDialog.start("정말 로그아웃 하시겠어요?","네, 할게요.", "아뇨, 안 해요!")
         }
 
         btn_withdrawal.setOnClickListener {
@@ -87,13 +87,13 @@ class MainActivity : AppCompatActivity() {
                         setGravity(Gravity.CENTER, 0, 0)
                         duration = Toast.LENGTH_SHORT
                         view = layout
-                        view.toast_message.text = "💦\n회원탈퇴가 완료되었습니다."
+                        view.toast_message.text = "회원탈퇴가 완료되었습니다."
                         show()
                     }
                 }
-                customDialog.start(R.drawable.ic_withdrawal,"저는 헤어지기 싫어요..\n다시 한 번 더 물어봐도 될까요?","정말 안녕...", "계속 함께할래요!")
+                customDialog.start("저는 헤어지기 싫어요..\n다시 한 번 더 물어봐도 될까요?","정말 안녕...", "계속 함께할래요!")
             }
-            customDialog.start(R.drawable.ic_withdrawal,"정말 탈퇴하시겠어요?\n보여드릴 재미있는 서비스가 많아요!","네, 할게요.", "아뇨, 안 해요!")
+            customDialog.start("정말 탈퇴하시겠어요?\n보여드릴 재미있는 서비스가 많아요\uD83D\uDE22","네, 할게요.", "아뇨, 안 해요!")
         }
 
     }
