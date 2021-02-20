@@ -29,18 +29,29 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/skyblue_roundstroke_3"
-        android:hint="아이디를 입력해주세요"
         android:fontFamily="@font/noto_sans_kr_regular"
-        android:textStyle="normal"
-        android:textSize="16sp"
-        android:textColor="@color/tripteller_grey_04"
+        android:hint="아이디를 입력해주세요"
         android:includeFontPadding="false"
         android:paddingHorizontal="12dp"
-        android:textCursorDrawable="@null"
         android:singleLine="true"
+        android:textColor="@color/tripteller_grey_04"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_signup_title" />
+
+    <ImageView
+        android:id="@+id/act_signup_edit_check_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_checkbox_pressed"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/act_signup_edit_id"
+        app:layout_constraintEnd_toEndOf="@+id/act_signup_edit_id"
+        app:layout_constraintTop_toTopOf="@+id/act_signup_edit_id" />
 
 
     <EditText
@@ -63,6 +74,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_signup_edit_id" />
+
+    <ImageView
+        android:id="@+id/act_signup_edit_check_pwd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_checkbox_pressed"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/act_signup_edit_pwd1"
+        app:layout_constraintEnd_toEndOf="@+id/act_signup_edit_pwd1"
+        app:layout_constraintTop_toTopOf="@+id/act_signup_edit_pwd1" />
 
     <TextView
         android:id="@+id/act_signup_text_pwdLengh"
@@ -100,6 +122,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_signup_text_pwdLengh" />
+
+    <ImageView
+        android:id="@+id/act_signup_edit_check_pwd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_checkbox_pressed"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/act_signup_edit_pwd2"
+        app:layout_constraintEnd_toEndOf="@+id/act_signup_edit_pwd2"
+        app:layout_constraintTop_toTopOf="@+id/act_signup_edit_pwd2" />
 
     <TextView
         android:id="@+id/act_signup_text_recheck"
