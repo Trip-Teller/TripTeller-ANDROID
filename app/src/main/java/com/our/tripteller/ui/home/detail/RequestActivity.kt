@@ -37,7 +37,7 @@ class RequestActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-            customDialog.start(0,"✈️\n이 내용으로 신청하시겠어요?","네, 맞아요", "아직이요!")
+            customDialog.start("✈️\n이 내용으로 신청하시겠어요?","네, 맞아요", "아직이요!")
         }
 
         tv_start.setOnClickListener {
