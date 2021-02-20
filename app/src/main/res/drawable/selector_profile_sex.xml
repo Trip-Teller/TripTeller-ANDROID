@@ -2,12 +2,15 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/iceblue_roundbox_stroke" />
+        android:drawable="@drawable/skyblue_roundbox_3"
+        android:color="@color/tripteller_white"/>
 
     <item
         android:state_selected="true"
-        android:drawable="@drawable/iceblue_roundbox_stroke" />
+        android:drawable="@drawable/skyblue_roundbox_3"
+        android:color="@color/tripteller_white"/>
 
     <item
-        android:drawable="@drawable/grey_roundbox_stroke" />
+        android:drawable="@drawable/skyblue_roundstroke_3"
+        android:color="@color/tripteller_grey_04"/>
 </selector>

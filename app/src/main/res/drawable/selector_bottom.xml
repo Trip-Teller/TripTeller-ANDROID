@@ -4,6 +4,6 @@
     <item android:state_selected="false"
         android:color="@color/gray"/>
     <item android:state_selected="true"
-        android:color="@color/black"/>
+        android:color="@color/tripteller_black"/>
 
 </selector>

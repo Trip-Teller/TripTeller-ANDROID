@@ -46,12 +46,12 @@
         android:layout_height="48dp"
         android:layout_marginHorizontal="48dp"
         android:layout_marginBottom="12dp"
-        android:background="@drawable/black_roundbox_24"
+        android:background="@drawable/black_roundbox_3"
         android:fontFamily="@font/noto_sans_kr_medium"
         android:includeFontPadding="false"
         android:textStyle="normal"
         android:textSize="15sp"
-        android:textColor="@color/white"
+        android:textColor="@color/tripteller_white"
         android:text="로그인"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/act_splash_btn_signup"
@@ -66,7 +66,7 @@
         android:layout_marginHorizontal="48dp"
         android:layout_marginBottom="29dp"
         android:gravity="center"
-        android:background="@drawable/white_roundbox_24"
+        android:background="@drawable/white_roundbox_3"
         app:layout_constraintBottom_toTopOf="@+id/act_splash_btn_justlook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,24 +84,11 @@
         android:fontFamily="@font/noto_sans_kr_regular"
         android:text="트립텔러 둘러보기"
         android:includeFontPadding="false"
-        android:textColor="@color/white"
+        android:textColor="@color/tripteller_white"
         android:textSize="15sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-    <include
-        android:id="@+id/layout_signin"
-        layout="@layout/layout_signin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/act_splash_kenBurnsView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

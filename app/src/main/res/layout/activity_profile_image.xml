@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sign.ProfileImageActivity">
+
+    <TextView
+        android:id="@+id/act_profile_Image_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:fontFamily="@font/noto_sans_kr_light"
+        android:includeFontPadding="false"
+        android:text="나를 표현할 수 있는\n사진을 업로드해 주세요!"
+        android:textAlignment="center"
+        android:textColor="@color/tripteller_black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/act_profile_image_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_profile_Image_title">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/act_profile_image"
+            android:layout_width="152dp"
+            android:layout_height="152dp" />
+
+        <ImageView
+            android:id="@+id/act_profile_image_raspberry"
+            android:layout_width="152dp"
+            android:layout_height="152dp"
+            android:src="@drawable/raspberry_circle_stroke"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/act_profile_noimage"
+            android:layout_width="152dp"
+            android:layout_height="152dp"
+            android:layout_gravity="center"
+            android:src="@drawable/btn_add_photo" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/act_profile_image_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="48dp"
+        android:background="@drawable/grey_roundbox_3"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="완료하기"
+        android:textColor="@color/tripteller_white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

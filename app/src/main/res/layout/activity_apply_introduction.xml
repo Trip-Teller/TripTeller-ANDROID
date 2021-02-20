@@ -15,7 +15,7 @@
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
         android:text="소개글 작성"
-        android:textColor="@color/black"
+        android:textColor="@color/tripteller_black"
         android:textFontWeight="700"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
                 android:includeFontPadding="false"
                 android:text="여행을 한마디로 소개해주세요"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
                 android:layout_marginTop="19dp" />
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="제목..."
-                android:textColorHint="@color/brown_grey"
+                android:textColorHint="@color/tripteller_grey_04"
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
@@ -89,7 +89,7 @@
                 android:includeFontPadding="false"
                 android:text="자신을 소개해주세요✋🏻"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
                 android:layout_marginTop="16dp" />
@@ -103,7 +103,7 @@
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
-                android:textColorHint="@color/brown_grey"
+                android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:gravity="top"
@@ -119,7 +119,7 @@
                 android:textSize="14sp"
                 android:includeFontPadding="false"
                 android:visibility="gone"
-                android:textColor="@color/tripteller_raspberry_2"
+                android:textColor="@color/tripteller_raspberry"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
@@ -131,7 +131,7 @@
                 android:includeFontPadding="false"
                 android:text="대표 추천 맛집을 소개해주세요🥘"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
                 android:layout_marginTop="16dp" />
@@ -145,7 +145,7 @@
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
-                android:textColorHint="@color/brown_grey"
+                android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:gravity="top"
@@ -161,7 +161,7 @@
                 android:textSize="14sp"
                 android:visibility="gone"
                 android:includeFontPadding="false"
-                android:textColor="@color/tripteller_raspberry_2"
+                android:textColor="@color/tripteller_raspberry"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
@@ -173,7 +173,7 @@
                 android:includeFontPadding="false"
                 android:text="대표 추천 카페를 소개해주세요☕️"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
                 android:layout_marginTop="16dp" />
@@ -187,7 +187,7 @@
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
-                android:textColorHint="@color/brown_grey"
+                android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:gravity="top"
@@ -203,7 +203,7 @@
                 android:textSize="14sp"
                 android:visibility="gone"
                 android:includeFontPadding="false"
-                android:textColor="@color/tripteller_raspberry_2"
+                android:textColor="@color/tripteller_raspberry"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
@@ -215,7 +215,7 @@
                 android:includeFontPadding="false"
                 android:text="대표 추천 명소를 소개해주세요🏝️"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
                 android:layout_marginTop="16dp" />
@@ -229,7 +229,7 @@
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
-                android:textColorHint="@color/brown_grey"
+                android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:gravity="top"
@@ -245,7 +245,7 @@
                 android:textSize="14sp"
                 android:visibility="gone"
                 android:includeFontPadding="false"
-                android:textColor="@color/tripteller_raspberry_2"
+                android:textColor="@color/tripteller_raspberry"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 

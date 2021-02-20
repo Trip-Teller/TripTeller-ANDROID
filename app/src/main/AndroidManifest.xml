@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.mypage.SelectImageActivity"></activity>
+        <activity android:name=".ui.sign.SigninActivity"></activity>
+        <activity android:name=".ui.sign.ProfileImageActivity" />
+        <activity android:name=".ui.mypage.SelectImageActivity" />
         <activity
             android:name=".ui.sign.DatePickerActivity"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
