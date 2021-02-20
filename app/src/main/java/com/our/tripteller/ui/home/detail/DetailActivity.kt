@@ -12,6 +12,7 @@ import com.our.tripteller.R
 import com.our.tripteller.data.HomeDetailData
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_detail.tv_nickname
+import kotlinx.android.synthetic.main.layout_recomendation.*
 import kotlin.properties.Delegates
 
 class DetailActivity : AppCompatActivity() {
@@ -26,9 +27,12 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val window = window
-        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        window.apply {
+            clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            statusBarColor = Color.TRANSPARENT
+        }
 
         setContentView(R.layout.activity_detail)
 
@@ -133,9 +137,9 @@ class DetailActivity : AppCompatActivity() {
         gender = homeDetailData[idx].gender
         act_detail_txt_content_title.text = homeDetailData[idx].title
         act_detail_txt_content_content.text = homeDetailData[idx].content
-        tv_dish.text = homeDetailData[idx].dish
-        tv_cafe.text = homeDetailData[idx].cafe
-        tv_place.text = homeDetailData[idx].place
+        tv_dish_content.text = homeDetailData[idx].dish
+        tv_cafe_content.text = homeDetailData[idx].cafe
+        tv_place_content.text = homeDetailData[idx].place
     }
 
 }

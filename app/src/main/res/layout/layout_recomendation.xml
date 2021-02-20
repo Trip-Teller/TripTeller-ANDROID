@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_dish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="추천 맛집 🥘"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_dish_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dish"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="8sp"
+            android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
+주소는 부산광역시 해운대구 00-000 랍니다!"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_dish_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="#00FF0000"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="지도보기"
+            android:textColor="@color/tripteller_grey_05_2"
+            android:textFontWeight="400"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/white"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_cafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="추천 카페 ☕️"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_cafe_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cafe"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="8sp"
+            android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
+주소는 부산광역시 해운대구 00-000 랍니다!"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_cafe_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="#00FF0000"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="지도보기"
+            android:textColor="@color/tripteller_grey_05_2"
+            android:textFontWeight="400"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/white"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="89dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="추천 명소 🏝️"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_place_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_place"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="8sp"
+            android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
+주소는 부산광역시 해운대구 00-000 랍니다!"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_place_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="#00FF0000"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/notosanskr"
+            android:includeFontPadding="false"
+            android:text="지도보기"
+            android:textColor="@color/tripteller_grey_05_2"
+            android:textFontWeight="400"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

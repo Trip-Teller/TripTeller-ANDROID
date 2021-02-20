@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fitsSystemWindows="true"
+
     tools:context=".ui.home.detail.DetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="335dp"
-        android:fitsSystemWindows="true">
+        android:layout_height="335dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -222,7 +221,17 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/white_top_roundbox"
                 android:layout_margin="16dp">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="56dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/gray_roundbox_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/act_detail_img_profile"
@@ -330,94 +339,34 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
-            <LinearLayout
+            <include
+                layout="@layout/layout_recomendation"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="11dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginBottom="92dp"
-                android:background="@drawable/iceblue_roundbox"
-                android:orientation="vertical"
-                android:paddingHorizontal="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천맛집 🥘"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tv_dish"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:lineSpacingExtra="8sp"
-                    android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!\n장소는 부산광역시 해운대구 00-000 랍니다!"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천카페 ☕️"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tv_cafe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:lineSpacingExtra="8sp"
-                    android:text="해운대가 훤히 보이는 OO카페를 추천드려요~\n
-뷰가 아주 좋답니다 ㅎㅎ 여기서 대판 싸웠던 고등학교 동창들과 화해했던 기억이 나네요!"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:fontFamily="@font/noto_sans_kr_bold"
-                    android:text="추천명소 🏝️"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tv_place"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/noto_sans_kr_regular"
-                    android:lineSpacingExtra="8sp"
-                    android:text="저는 다대포 해수욕장을 추천드려요! 전세계에서 가장 아름다운 낙조를 보실 수 있을 거예요. 아주 로맨틱해서 프로포즈 장소로도 손색이 없죠!"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <ImageView
+    <TextView
         android:id="@+id/btn_consulting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="컨설팅 받기"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="79dp"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/notosanskr"
+        android:textFontWeight="500"
+        android:includeFontPadding="false"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:drawableRight="@drawable/btn_chat"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/btn_getconsult" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/black_bottom_gradation"
-        app:layout_anchor="@+id/appBarLayout"
-        app:layout_anchorGravity="center" />
+        android:background="@drawable/black_roundbox_3" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
