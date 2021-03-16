@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="20dp"
-        android:background="@color/white"
+        android:background="@drawable/white_roundbox_3"
         android:elevation="15dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
             android:fontFamily="@font/notosanskr"
             android:includeFontPadding="false"
             android:text="추천 맛집 🥘"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="500"
             android:textSize="18sp" />
 
@@ -45,7 +45,7 @@
             android:lineSpacingExtra="8sp"
             android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
 주소는 부산광역시 해운대구 00-000 랍니다!"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="400"
             android:textSize="16sp" />
 
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="17dp"
-        android:background="@color/white"
+        android:background="@drawable/white_roundbox_3"
         android:elevation="15dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
@@ -89,7 +89,7 @@
             android:fontFamily="@font/notosanskr"
             android:includeFontPadding="false"
             android:text="추천 카페 ☕️"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="500"
             android:textSize="18sp" />
 
@@ -106,7 +106,7 @@
             android:lineSpacingExtra="8sp"
             android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
 주소는 부산광역시 해운대구 00-000 랍니다!"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="400"
             android:textSize="16sp" />
 
@@ -133,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="17dp"
-        android:background="@color/white"
+        android:background="@drawable/white_roundbox_3"
         android:elevation="15dp"
         android:orientation="vertical"
         android:layout_marginBottom="89dp"
@@ -151,7 +151,7 @@
             android:fontFamily="@font/notosanskr"
             android:includeFontPadding="false"
             android:text="추천 명소 🏝️"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="500"
             android:textSize="18sp" />
 
@@ -168,7 +168,7 @@
             android:lineSpacingExtra="8sp"
             android:text="저는 부산의 OO돼지국밥을 추천드려요! 45년 경력의 할머님이 운영 중인데 내공이 느껴지는 깊은 맛이랄까요!
 주소는 부산광역시 해운대구 00-000 랍니다!"
-            android:textColor="@color/black"
+            android:textColor="@color/tripteller_black"
             android:textFontWeight="400"
             android:textSize="16sp" />
 

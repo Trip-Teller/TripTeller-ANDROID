@@ -32,12 +32,14 @@ class ApplyIntroductionActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s.isNullOrBlank()) {
-                    et_title.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    et_title.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     title = false
+                    tv_title_cnt.text = "(0/20)"
                     btn_next.isEnabled = false
                 } else {
-                    et_title.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    et_title.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     title = true
+                    tv_title_cnt.text = "(" + et_title.text.length + "/20)"
                     if(title && introduction && dish && cafe && place){
                         btn_next.isEnabled = true
                     }
@@ -49,14 +51,16 @@ class ApplyIntroductionActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s?.length!! < 100) {
-                    et_introduction.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    et_introduction.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     tv_error1.visibility = View.VISIBLE
                     introduction = false
+                    tv_introduction_cnt.text = "(" + et_introduction.text.length + "/500)"
                     btn_next.isEnabled = false
                 } else {
-                    et_introduction.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    et_introduction.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     tv_error1.visibility = View.GONE
                     introduction = true
+                    tv_introduction_cnt.text = "(" + et_introduction.text.length + "/500)"
                     if(title && introduction && dish && cafe && place){
                         btn_next.isEnabled = true
                     }
@@ -68,14 +72,16 @@ class ApplyIntroductionActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s?.length!! < 100) {
-                    et_restaurant.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    et_restaurant.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     tv_error2.visibility = View.VISIBLE
                     dish = false
+                    tv_restaurant_cnt.text = "(" + et_restaurant.text.length + "/500)"
                     btn_next.isEnabled = false
                 } else {
-                    et_restaurant.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    et_restaurant.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     tv_error2.visibility = View.GONE
                     dish = true
+                    tv_restaurant_cnt.text = "(" + et_restaurant.text.length + "/500)"
                     if(title && introduction && dish && cafe && place){
                         btn_next.isEnabled = true
                     }
@@ -87,14 +93,16 @@ class ApplyIntroductionActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s?.length!! < 100) {
-                    et_cafe.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    et_cafe.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     tv_error3.visibility = View.VISIBLE
                     cafe = false
+                    tv_cafe_cnt.text = "(" + et_cafe.text.length + "/500)"
                     btn_next.isEnabled = false
                 } else {
-                    et_cafe.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    et_cafe.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     tv_error3.visibility = View.GONE
                     cafe = true
+                    tv_cafe_cnt.text = "(" + et_cafe.text.length + "/500)"
                     if(title && introduction && dish && cafe && place){
                         btn_next.isEnabled = true
                     }
@@ -106,14 +114,16 @@ class ApplyIntroductionActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s?.length!! < 100) {
-                    et_place.setBackgroundResource(R.drawable.raspberry_stroke_24)
+                    et_place.setBackgroundResource(R.drawable.raspberry_stroke_3)
                     tv_error4.visibility = View.VISIBLE
                     place = false
+                    tv_place_cnt.text = "(" + et_place.text.length + "/500)"
                     btn_next.isEnabled = false
                 } else {
-                    et_place.setBackgroundResource(R.drawable.iceblue_roundbox_24)
+                    et_place.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     tv_error4.visibility = View.GONE
                     place = true
+                    tv_place_cnt.text = "(" + et_place.text.length + "/500)"
                     if(title && introduction && dish && cafe && place){
                         btn_next.isEnabled = true
                     }

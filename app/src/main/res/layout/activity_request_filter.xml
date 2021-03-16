@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mypage.ApplyFilterActivity">
+    tools:context=".ui.home.detail.RequestFilterActivity">
 
     <TextView
         android:id="@+id/textView9"
@@ -14,7 +14,7 @@
         android:paddingVertical="12dp"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:text="취향선택"
+        android:text="컨설팅 신청"
         android:textColor="@color/tripteller_black"
         android:textFontWeight="700"
         android:textSize="24sp"
@@ -38,6 +38,7 @@
         android:text="다음" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
@@ -55,7 +56,7 @@
                 android:layout_marginStart="19dp"
                 android:fontFamily="@font/notosanskr"
                 android:includeFontPadding="false"
-                android:text="당신의 여행지는 어떤 모습인가요?\n최대 6개의 테마를 선택할 수 있어요."
+                android:text="당신이 그리는 여행 컨셉을 전해보세요!\n최대 3개의 테마를 선택할 수 있어요."
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
@@ -218,5 +219,63 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@color/tripteller_white"
+        android:orientation="vertical"
+        android:elevation="100dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:textFontWeight="400"
+            android:textSize="16dp"
+            android:includeFontPadding="false"
+            android:text="내가 원하는 여행은..."
+            android:layout_marginTop="16dp"
+            android:textColor="@color/tripteller_black"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tripteller_grey_01_2"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr"
+            android:textFontWeight="400"
+            android:textSize="16dp"
+            android:includeFontPadding="false"
+            android:text="액티비티 나홀로여행 드라이브 예요."
+            android:layout_marginTop="13dp"
+            android:textColor="@color/tripteller_black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tripteller_grey_01_2"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_roundbox_3"
+            android:text="다음으로"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/tripteller_white"
+            android:gravity="center"
+            android:layout_marginTop="24dp"/>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
