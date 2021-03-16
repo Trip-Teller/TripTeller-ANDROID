@@ -33,7 +33,9 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        regionAdapter = RegionAdapter(view.context)
+        regionAdapter = RegionAdapter(view.context) {RegionData, view: View->
+
+        }
 
         setHasOptionsMenu(true)
         rv_region.adapter = regionAdapter
@@ -78,6 +80,8 @@ class MainFragment : Fragment() {
         rv_home.setPageTransformer(compositePageTransformer)
         rv_home.addItemDecoration(ItemDecoration(this.context!!,0,10))
         loadHomeDatas()
+
+
     }
 
     private fun loadHomeDatas() {
@@ -90,6 +94,7 @@ class MainFragment : Fragment() {
         }
         homeAdapter.datas = homeData
         homeAdapter.notifyDataSetChanged()
+
     }
 
     private fun loadRegionDatas() {

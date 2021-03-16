@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -59,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:includeFontPadding="false"
-                android:text="여행을 한마디로 소개해주세요"
+                android:layout_alignParentLeft="true"
+                android:text="여행을 한마디로 소개해주세요✈️"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
@@ -72,14 +73,35 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="제목..."
+                android:layout_below="@id/tv_title"
                 android:textColorHint="@color/tripteller_grey_04"
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
+                android:maxLines="1"
+                android:maxLength="20"
                 android:layout_marginTop="8dp"
-                android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
-                android:background="@drawable/iceblue_roundbox_24"/>
+                android:paddingLeft="16dp"
+                android:paddingRight="60dp"
+                android:ellipsize="end"
+                android:background="@drawable/skyblue_roundstroke_3"/>
+
+            <TextView
+                android:id="@+id/tv_title_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:textFontWeight="400"
+                android:includeFontPadding="false"
+                android:textSize="14dp"
+                android:layout_alignTop="@id/et_title"
+                android:layout_alignEnd="@id/et_title"
+                android:layout_alignBottom="@id/et_title"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:text="(0/20)"/>
 
             <TextView
                 android:id="@+id/tv_introduction"
@@ -88,6 +110,7 @@
                 android:fontFamily="@font/notosanskr"
                 android:includeFontPadding="false"
                 android:text="자신을 소개해주세요✋🏻"
+                android:layout_below="@id/et_title"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
@@ -97,22 +120,45 @@
             <EditText
                 android:id="@+id/et_introduction"
                 android:layout_width="match_parent"
-                android:layout_height="347dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="본문을 입력해주세요..."
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
+                android:layout_below="@id/tv_introduction"
                 android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
-                android:padding="16dp"
+                android:maxLength="500"
+                android:minHeight="230dp"
+                android:paddingTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="38dp"
                 android:gravity="top"
-                android:background="@drawable/iceblue_roundbox_24" />
+                android:background="@drawable/skyblue_roundstroke_3" />
+
+            <TextView
+                android:id="@+id/tv_introduction_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:textFontWeight="400"
+                android:includeFontPadding="false"
+                android:textSize="14dp"
+                android:layout_alignTop="@id/et_introduction"
+                android:layout_alignEnd="@id/et_introduction"
+                android:layout_alignBottom="@id/et_introduction"
+                android:layout_marginRight="12dp"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:text="(0/500)"/>
 
             <TextView
                 android:id="@+id/tv_error1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/et_introduction"
                 android:text="정확한 컨설팅 소개를 위해 100자 이상 작성해주세요"
                 android:fontFamily="@font/notosanskr"
                 android:textFontWeight="400"
@@ -131,6 +177,7 @@
                 android:includeFontPadding="false"
                 android:text="대표 추천 맛집을 소개해주세요🥘"
                 android:layout_marginStart="5dp"
+                android:layout_below="@id/tv_error1"
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
                 android:textSize="16sp"
@@ -139,17 +186,39 @@
             <EditText
                 android:id="@+id/et_restaurant"
                 android:layout_width="match_parent"
-                android:layout_height="347dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="본문을 입력해주세요..."
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
+                android:layout_below="@id/tv_restaurant"
                 android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
-                android:padding="16dp"
+                android:maxLength="500"
+                android:minHeight="230dp"
+                android:paddingTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="38dp"
                 android:gravity="top"
-                android:background="@drawable/iceblue_roundbox_24" />
+                android:background="@drawable/skyblue_roundstroke_3" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:textFontWeight="400"
+                android:includeFontPadding="false"
+                android:textSize="14dp"
+                android:layout_alignTop="@id/et_restaurant"
+                android:layout_alignEnd="@id/et_restaurant"
+                android:layout_alignBottom="@id/et_restaurant"
+                android:layout_marginRight="12dp"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:text="(0/500)"/>
 
             <TextView
                 android:id="@+id/tv_error2"
@@ -162,6 +231,7 @@
                 android:visibility="gone"
                 android:includeFontPadding="false"
                 android:textColor="@color/tripteller_raspberry"
+                android:layout_below="@id/et_restaurant"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
@@ -172,6 +242,7 @@
                 android:fontFamily="@font/notosanskr"
                 android:includeFontPadding="false"
                 android:text="대표 추천 카페를 소개해주세요☕️"
+                android:layout_below="@id/tv_error2"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
@@ -181,17 +252,39 @@
             <EditText
                 android:id="@+id/et_cafe"
                 android:layout_width="match_parent"
-                android:layout_height="347dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="본문을 입력해주세요..."
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
+                android:layout_below="@id/tv_cafe"
                 android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
-                android:padding="16dp"
+                android:maxLength="500"
+                android:minHeight="230dp"
+                android:paddingTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="38dp"
                 android:gravity="top"
-                android:background="@drawable/iceblue_roundbox_24" />
+                android:background="@drawable/skyblue_roundstroke_3" />
+
+            <TextView
+                android:id="@+id/tv_cafe_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:textFontWeight="400"
+                android:includeFontPadding="false"
+                android:textSize="14dp"
+                android:layout_alignTop="@id/et_cafe"
+                android:layout_alignEnd="@id/et_cafe"
+                android:layout_alignBottom="@id/et_cafe"
+                android:layout_marginRight="12dp"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:text="(0/500)"/>
 
             <TextView
                 android:id="@+id/tv_error3"
@@ -204,6 +297,7 @@
                 android:visibility="gone"
                 android:includeFontPadding="false"
                 android:textColor="@color/tripteller_raspberry"
+                android:layout_below="@id/et_cafe"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
@@ -214,6 +308,7 @@
                 android:fontFamily="@font/notosanskr"
                 android:includeFontPadding="false"
                 android:text="대표 추천 명소를 소개해주세요🏝️"
+                android:layout_below="@id/tv_error3"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/tripteller_black"
                 android:textFontWeight="400"
@@ -223,33 +318,56 @@
             <EditText
                 android:id="@+id/et_place"
                 android:layout_width="match_parent"
-                android:layout_height="347dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskr"
                 android:hint="본문을 입력해주세요..."
                 android:includeFontPadding="false"
                 android:textFontWeight="400"
                 android:textSize="16dp"
+                android:layout_below="@id/tv_place"
                 android:textColorHint="@color/tripteller_grey_04"
                 android:layout_marginTop="8dp"
-                android:padding="16dp"
+                android:maxLength="500"
+                android:minHeight="230dp"
+                android:paddingTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="38dp"
                 android:gravity="top"
-                android:background="@drawable/iceblue_roundbox_24" />
+                android:background="@drawable/skyblue_roundstroke_3" />
+
+            <TextView
+                android:id="@+id/tv_place_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:textFontWeight="400"
+                android:includeFontPadding="false"
+                android:textSize="14dp"
+                android:layout_alignTop="@id/et_place"
+                android:layout_alignEnd="@id/et_place"
+                android:layout_alignBottom="@id/et_place"
+                android:layout_marginRight="12dp"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:text="(0/500)"/>
 
             <TextView
                 android:id="@+id/tv_error4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="정확한 컨설팅 소개를 위해 100자 이상 작성해주세요"
+                android:layout_below="@id/et_place"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="정확한 컨설팅 소개를 위해 100자 이상 작성해주세요"
+                android:textColor="@color/tripteller_raspberry"
                 android:textFontWeight="400"
                 android:textSize="14sp"
-                android:visibility="gone"
-                android:includeFontPadding="false"
-                android:textColor="@color/tripteller_raspberry"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"/>
+                android:visibility="gone" />
 
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

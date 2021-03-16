@@ -4,7 +4,7 @@
     android:id="@+id/popup_logout"
     android:layout_width="328dp"
     android:layout_height="wrap_content"
-    android:background="@drawable/white_roundbox_16">
+    android:background="@drawable/white_roundbox_3">
 
     <TextView
         android:id="@+id/tv_content"

@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.our.tripteller.R
 import com.our.tripteller.data.RegionData
 
-class RegionAdapter(private val context : Context) : RecyclerView.Adapter<RegionViewHolder>() {
+class RegionAdapter(private val context : Context, val itemClick: (RegionData, View) -> Unit) : RecyclerView.Adapter<RegionViewHolder>() {
     var datas = mutableListOf<RegionData>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegionViewHolder{
         val view = LayoutInflater.from(context).inflate(R.layout.item_region,parent,false)
-        return RegionViewHolder(view)
+        return RegionViewHolder(view, itemClick)
     }
 
     override fun getItemCount(): Int {
@@ -25,11 +25,15 @@ class RegionAdapter(private val context : Context) : RecyclerView.Adapter<Region
     }
 }
 
-class RegionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class RegionViewHolder(
+    itemView: View,
+    val itemClick: (RegionData, View) -> Unit
+) : RecyclerView.ViewHolder(itemView) {
 
     var mainImg : ImageView = itemView.findViewById(R.id.circleImageView)
 
     fun bind(myData: RegionData){
         mainImg.setImageResource(myData.img)
+        itemView.setOnClickListener{itemClick(myData, itemView)}
     }
 }

@@ -26,7 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
-        android:textColor="@color/tripteller_black"
+        android:textColor="@color/selector_button"
+        android:enabled="false"
         android:textFontWeight="400"
         android:textSize="16sp"
         android:includeFontPadding="false"
@@ -63,6 +64,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RadioGroup
+                android:id="@+id/rg_region"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"

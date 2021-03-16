@@ -26,7 +26,7 @@ class ApplyImageActivity : AppCompatActivity() {
                 setGravity(Gravity.CENTER, 0, 0)
                 duration = Toast.LENGTH_SHORT
                 view = layout
-                view.toast_message.text = "\uD83D\uDC4F\uD83C\uDFFB\n컨설턴트 등록이 완료되었습니다"
+                view.toast_message.text = "컨설턴트 등록을 완료했어요\uD83D\uDC4F\uD83C\uDFFB"
                 show()
             }
             finish()
@@ -45,6 +45,7 @@ class ApplyImageActivity : AppCompatActivity() {
                 123 -> {
                     val url = data!!.getStringExtra("url")
                     Glide.with(this).load(url).into(iv_img)
+                    btn_fin.isEnabled = true
                 }
             }
         }
