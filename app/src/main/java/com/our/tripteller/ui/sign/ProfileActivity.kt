@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.our.tripteller.R
 import kotlinx.android.synthetic.main.activity_profile.*
@@ -14,9 +15,17 @@ class ProfileActivity : AppCompatActivity() {
     var age = false
     var sex = false
 
+    var nickname = ""
+    var gender = ""
+    var birthDate = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        //이전 회원가입에서 id, password 받아온다.
+        val id = intent.getStringExtra("id")
+        val password = intent.getStringExtra("password")
 
         //닉네임 설정
         act_profile_edit_nickname.addTextChangedListener(object : TextWatcher {
@@ -102,10 +111,31 @@ class ProfileActivity : AppCompatActivity() {
             sex = act_profile_btn_women.isSelected || act_profile_btn_man.isSelected
 
             if (nick && age && sex) {
+                nickname = act_profile_edit_nickname.text.toString()
+
+                gender = if (act_profile_btn_women.isSelected) {
+                    "f"
+                } else if (act_profile_btn_man.isSelected) {
+                    "m"
+                } else {
+                    "o"
+                }
+
+                birthDate = "${act_profile_text_year.text}-${act_profile_text_month.text}-${act_profile_text_day.text}"
+
+                Log.d("SignUp 2 ", "$id $password $nickname $gender $birthDate ${2021-act_profile_text_year.text.toString().toInt()+1}")
                 val intent = Intent(this, ProfileImageActivity::class.java)
+                intent.putExtra("id", id)
+                intent.putExtra("password", password)
+                intent.putExtra("nickname", nickname)
+                intent.putExtra("gender", gender)
+                intent.putExtra("birthDate", birthDate)
+                intent.putExtra("age", 2021-act_profile_text_year.text.toString().toInt()+1)
+
                 startActivity(intent)
 //                finish()
             }
+
         }
 
     }
