@@ -41,7 +41,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btn_consulting.setOnClickListener{
-            val intent = Intent(this, RequestActivity::class.java)
+            val intent = Intent(this, RequestFilterActivity::class.java)
             intent.putExtra("profile", profile)
             intent.putExtra("nickname", nickname)
             intent.putExtra("age", age)
