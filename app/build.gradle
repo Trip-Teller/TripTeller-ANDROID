@@ -63,7 +63,7 @@ dependencies {
     //Retrofit 에서 Gson 을 사용하기 위한 라이브러리
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     //okhttp3 https://github.com/MaxToyberman/react-native-ssl-pinning
-    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     //디자인 라이브러리 BottomNavigation https://github.com/Ashok-Varma/BottomNavigation
@@ -78,10 +78,10 @@ dependencies {
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
     implementation "androidx.paging:paging-rxjava2:$paging_version"
 
-    implementation 'androidx.lifecycle:lifecycle-runtime:2.2.0-alpha04'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test:rules:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.4.0-alpha01'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
 
     //움직이는 splash
     implementation 'com.github.goka.kenburnsview:library:1.0.3'

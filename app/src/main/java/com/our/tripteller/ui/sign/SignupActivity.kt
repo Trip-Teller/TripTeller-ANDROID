@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import com.our.tripteller.R
 import kotlinx.android.synthetic.main.activity_chat_room.*
@@ -88,6 +89,9 @@ class SignupActivity : AppCompatActivity() {
 
             if (id && pwd1 && pwd2 && same) {
                 val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra("id", act_signup_edit_id.text.toString())
+                intent.putExtra("password", act_signup_edit_pwd1.text.toString())
+                Log.d("SignUp 1 ", "${act_signup_edit_id.text} ${act_signup_edit_pwd1.text}")
                 startActivity(intent)
                 finish()
             }
