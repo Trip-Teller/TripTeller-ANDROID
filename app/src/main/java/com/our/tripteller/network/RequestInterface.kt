@@ -2,6 +2,7 @@ package com.our.tripteller.network
 
 import com.google.gson.JsonObject
 import com.our.tripteller.data.*
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -14,7 +15,14 @@ interface RequestInterface{
     @Multipart
     @POST("/user/v0")
     fun requestSignup(
-        @PartMap map: HashMap<String?, Any?>): Call<ResponseSignUpData>
+        @Part ("age") age: RequestBody,
+        @Part ("birthDate") birthDate: RequestBody,
+        @Part ("password") password: RequestBody,
+        @Part ("gender") gender: RequestBody,
+        @Part ("email") email: RequestBody,
+        @Part ("nickname") nickname: RequestBody,
+        @Part profileImage: MultipartBody.Part
+    ): Call<ResponseSignUpData>
 
     @POST("/auth/v0")
     fun requestSignin(@Body body: JsonObject): Call<ResponseSignInData>
