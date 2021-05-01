@@ -14,13 +14,7 @@ interface RequestInterface{
 
     @Multipart
     @POST("/user/v0")
-    fun requestSignup(
-        @Part ("age") age: RequestBody,
-        @Part ("birthDate") birthDate: RequestBody,
-        @Part ("password") password: RequestBody,
-        @Part ("gender") gender: RequestBody,
-        @Part ("email") email: RequestBody,
-        @Part ("nickname") nickname: RequestBody,
+    fun requestSignup( @Body body:RequestSignUpData,
         @Part profileImage: MultipartBody.Part
     ): Call<ResponseSignUpData>
 

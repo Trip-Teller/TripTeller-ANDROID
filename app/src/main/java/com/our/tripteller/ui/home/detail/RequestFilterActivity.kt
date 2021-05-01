@@ -1,11 +1,13 @@
 package com.our.tripteller.ui.home.detail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.our.tripteller.R
 import kotlinx.android.synthetic.main.activity_request_filter.*
 
 class RequestFilterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_filter)
@@ -76,6 +78,10 @@ class RequestFilterActivity : AppCompatActivity() {
 
         btn_drive.setOnClickListener {
             btn_drive.isSelected = !btn_drive.isSelected
+        }
+
+        btn_next.setOnClickListener {
+            startActivity(Intent(this, RequestActivity::class.java))
         }
     }
 }

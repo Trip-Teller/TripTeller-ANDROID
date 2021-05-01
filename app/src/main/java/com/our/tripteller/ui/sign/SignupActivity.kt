@@ -26,6 +26,7 @@ class SignupActivity : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 act_signup_edit_id.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
+                act_signup_btn.isEnabled = true
             }
         })
 
@@ -42,6 +43,7 @@ class SignupActivity : AppCompatActivity() {
                 else{
                     act_signup_edit_pwd1.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
                     act_signup_text_pwdLengh.visibility = View.GONE
+                    act_signup_btn.isEnabled = true
                 }
             }
         })

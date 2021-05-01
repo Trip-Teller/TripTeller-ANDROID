@@ -88,6 +88,21 @@ class DetailActivity : AppCompatActivity() {
                 dish = "을지로의 바이브를 가장 잘 느낄 수 있는 곳은 바로 을지면옥이죠. 정말 맛있습니다. 말이 필요없음. 줄서서라도 가야함. 강추",
                 cafe = "을지로에 워낙 카페가 많아서 차라리 와인바와 같이하는 곳을 소개하자면 르템플이라는 바를 소개드려요. 분위기가 미쳤",
                 place = "힘지로의 숨은 명소는 감각의 제국이라고 할 수 있죠. 금욜에 저와 같이 음악에 몸을 맡겨 둠칫 하실 분 있다면 꼭 가시길 추천드려요!"))
+            add (HomeDetailData(id = 5, mainimg = "https://images.unsplash.com/photo-1612977512598-3b8d6a498bbb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80", region = "제주도", intro1 = "20대의 제주도 알바생이 추천하는", intro2 = "제주도 여행일지", tag1 = "커플여행", tag2 = "우정여행", tag3 = "나홀로여행", tag4 = "자연", tag5 = null, tag6 = null,  cnt = 4,
+                profile = "https://images.unsplash.com/photo-1520763185298-1b434c919102?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80", nickname = "제주사랑", age = 28, gender = "여자", title = "[게스트하우스 스텝 픽 제주도 투어 소개해드릴게요.]", content = "안녕하세요 제주도가 좋아 제주도 게스트하우스 스텝으로 일하면서 3달째 제주도를 즐기고 있는 20대 대학생이에요. 저는 제주도가 좋아서 학교를 휴학하고 살려고 내려왔답니다. 오전에는 게스트하우스 스텝으로 일을하고, 저녁에는 여행을 다니고 있어요. 제가 여행다니면서 좋았던 숨은 스팟을 소개해드릴게요",
+                dish = "제주도 우도에 있는 돼지고기두루치기를 추천합니다. 서울에서 먹을 수 없는 맛이에요. 제주도 흑돼지와 콩나물의 조화가 예술입니다.",
+                cafe = "역시 제주도 우도에 있는 통유리 카페를 추천드려요. 햇살이 유리창을 뚫고 들어오는데 정말 채광이 멋있어요. 유리창 넘어 우도의 푸른 바다 또한 볼 수 있답니다.",
+                place = "우도의 바닷가를 추천드려요 특히 우도에서 카누를 할 수 있는 곳이 있는데 거기에서 노를 저으며 푸른 바다를 구경하면 그렇게 예쁘답니다."))
+            add (HomeDetailData(id = 6, mainimg = "https://images.unsplash.com/photo-1563354616-0dd25227694d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80", region = "경상도", intro1 = "경주는 수학여행?", intro2 = "아니, 커플여행!", tag1 = "커플여행", tag2 = "가족여행", tag3 = "자연", tag4 = null, tag5 = null, tag6 = null,  cnt = 3,
+                profile = "https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", nickname = "경주사나이", age = 27, gender = "남자", title = "경주", content = "안녕하세요 경상도 사람입니다. 경상도 여행하면 모두 부산을 떠올리실 텐데, 사실 경상도의 핵심은 경주죠! 경주하면 불국사 첨성대 등 수학여행을 생각하실 텐데 경주에서 6년동안 산 사람으로 숨은 경주의 매력을 소개해드릴게요",
+                dish = "이런게 경주에? 하실 수 있지만 저만아는 경주의 파스타집이 있답니다. 경주의 최고 맛집이에요. 경주에서 유명한 막걸리와 함께 마실 수 있는 파스타에요. 퓨전 파스타로 아주 맛이 좋아요!",
+                cafe = "경주에도 경리단길이 있어요! 최근 카페골목이 생겨나면서 핸드드립으로 커피를 내려주는 카페가 생겼답니다. 바리스타가 내려주는 커피를 마셔보세요!",
+                place = "제 추천 명소는 안압지에요! 불국사가 제일 유명하지만 제 원픽은 안압지랍니다. 안압지의 밤은 정말 환상이에요. 밤에 노래 들으며 산책해보세요."))
+            add (HomeDetailData(id = 7, mainimg = "https://images.unsplash.com/photo-1509327522225-6ce58f4795c7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1601&q=80", region = "경기도", intro1 = "경희대학생이 알려주는", intro2 = "아름다운 수원투어", tag1 = "커플여행", tag2 = "맛집투어", tag3 = "뚜벅이", tag4 = null, tag5 = null, tag6 = null,  cnt = 3,
+                profile = "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", nickname = "데이비드", age = 26, gender = "남자", title = "수원", content = "안녕하세요 경희대학교 국제캠퍼스에 재학중인 대학생입니다. 원래 부산에 살다가 학교 때문에 수원으로 이사온지 5년이 되었습니다. 수원에 지내면서 다녔던 곳들을 추천해드릴게요.",
+                dish = "수원 근처에 곱창 골목이 있어요. 여기서만 먹을 수 있는 곱창 소스가 있답니다. 제가 대학다닐 때 주3일은 곱창을 먹었어요. 저녁에 가면 사람이 너무 많아 줄을 설 수 있으니 일찍 가는 걸 추천드려요!",
+                cafe = "수원에 있는 수제팥빙수집을 추천드려요. 사장님이 직접 팥을 갈아서 만드신다고 해요. 그래서 그런지 팥이 엄청 깊은 맛이 난답니다. 수원에가서 꼭 먹어야할 팥빙수에요!",
+                place = "수원하면 수원화성이죠。수원화성하면 뻔할 수 있지만, 지금 날씨에 수원화성을 가면 좋은 풍경을 볼 수 있어요. 애인과 같이 수원화성에 커피한잔 들고 걸어보세요."))
         }
     }
     private fun initView(){

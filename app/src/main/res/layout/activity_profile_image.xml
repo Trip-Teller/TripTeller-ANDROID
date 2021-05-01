@@ -33,7 +33,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/act_profile_image"
             android:layout_width="152dp"
-            android:layout_height="152dp" />
+            android:layout_height="152dp"
+            android:background="@drawable/btn_add_photo"/>
 
         <ImageView
             android:id="@+id/act_profile_image_raspberry"
@@ -41,13 +42,6 @@
             android:layout_height="152dp"
             android:src="@drawable/raspberry_circle_stroke"
             android:visibility="invisible" />
-
-        <ImageView
-            android:id="@+id/act_profile_noimage"
-            android:layout_width="152dp"
-            android:layout_height="152dp"
-            android:layout_gravity="center"
-            android:src="@drawable/btn_add_photo" />
     </FrameLayout>
 
     <TextView
@@ -55,9 +49,10 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginHorizontal="48dp"
-        android:background="@drawable/grey_roundbox_3"
+        android:background="@drawable/selector_nextbtn"
         android:fontFamily="@font/noto_sans_kr_medium"
         android:gravity="center"
+        android:enabled="false"
         android:includeFontPadding="false"
         android:text="완료하기"
         android:textColor="@color/tripteller_white"

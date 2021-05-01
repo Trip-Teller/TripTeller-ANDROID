@@ -37,6 +37,7 @@ class ProfileActivity : AppCompatActivity() {
             ) {
                 // 입력난에 변화가 있을 시 조치
                 act_profile_edit_nickname.setBackgroundResource(R.drawable.skyblue_roundstroke_3)
+                act_profile_btn_next.isEnabled = true
             }
 
             override fun afterTextChanged(arg0: Editable) {

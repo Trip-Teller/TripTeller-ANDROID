@@ -34,7 +34,7 @@
         android:includeFontPadding="false"
         android:paddingHorizontal="12dp"
         android:singleLine="true"
-        android:textColor="@color/tripteller_grey_04"
+        android:textColor="@color/tripteller_black"
         android:textCursorDrawable="@null"
         android:textSize="16sp"
         android:textStyle="normal"
@@ -66,7 +66,7 @@
         android:fontFamily="@font/noto_sans_kr_regular"
         android:textStyle="normal"
         android:textSize="16sp"
-        android:textColor="@color/tripteller_grey_04"
+        android:textColor="@color/tripteller_black"
         android:includeFontPadding="false"
         android:paddingHorizontal="12dp"
         android:singleLine="true"
@@ -113,7 +113,7 @@
         android:fontFamily="@font/noto_sans_kr_regular"
         android:textStyle="normal"
         android:textSize="16sp"
-        android:textColor="@color/tripteller_grey_04"
+        android:textColor="@color/tripteller_black"
         android:inputType="textPassword"
         android:singleLine="true"
         android:paddingHorizontal="12dp"
@@ -150,17 +150,18 @@
         app:layout_constraintTop_toBottomOf="@+id/act_signup_edit_pwd2" />
 
 
-    <TextView
+    <Button
         android:id="@+id/act_signup_btn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="86dp"
-        android:background="@drawable/grey_roundbox_3"
+        android:background="@drawable/selector_nextbtn"
         android:fontFamily="@font/noto_sans_kr_regular"
         android:gravity="center_horizontal"
         android:includeFontPadding="false"
         android:paddingVertical="12dp"
         android:text="다음으로"
+        android:enabled="false"
         android:textColor="@color/tripteller_white"
         android:textSize="15sp"
         android:textStyle="normal"

@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="36dp"
-        android:layout_marginHorizontal="60dp"
+        android:layout_marginHorizontal="50dp"
         android:background="@drawable/skyblue_roundstroke_3"
         android:gravity="center_vertical"
         android:hint="별명을 입력해주세요"
@@ -44,7 +44,7 @@
         android:id="@+id/act_profile_const1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginHorizontal="60dp"
+        android:layout_marginHorizontal="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
@@ -105,7 +105,8 @@
                 android:background="@drawable/skyblue_roundstroke_3"
                 android:gravity="center"
                 android:spinnerMode="dialog"
-                android:textColor="@color/tripteller_black" />
+                android:textColor="@color/tripteller_black"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -141,7 +142,8 @@
                 android:gravity="center"
                 android:spinnerMode="dialog"
                 android:textColor="@color/tripteller_black"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -164,7 +166,7 @@
     <LinearLayout
         android:id="@+id/act_profile_const2"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="60dp"
+        android:layout_marginHorizontal="50dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,11 +213,12 @@
         android:layout_height="48dp"
         android:layout_marginHorizontal="48dp"
         android:text="다음으로"
-        android:background="@drawable/grey_roundbox_3"
+        android:background="@drawable/selector_nextbtn"
         android:fontFamily="@font/noto_sans_kr_regular"
         android:gravity="center_horizontal"
         android:includeFontPadding="false"
         android:paddingVertical="12dp"
+        android:enabled="false"
         android:textColor="@color/tripteller_white"
         android:textSize="15sp"
         android:textStyle="normal"

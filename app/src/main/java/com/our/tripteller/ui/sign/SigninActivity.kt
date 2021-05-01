@@ -43,6 +43,8 @@ class SigninActivity : AppCompatActivity() {
 
         val rnds = intent.getIntExtra("img", 0)
         act_signin_kenBurnsView.setImageResource(datas[rnds])
+        act_signin_btn_check.isSelected = true
+
 
         act_signin_btn_check.setOnClickListener {
             act_signin_btn_check.isSelected = !act_signin_btn_check.isSelected
@@ -59,6 +61,9 @@ class SigninActivity : AppCompatActivity() {
                 act_signin_edit_pwd.setBackgroundResource(R.drawable.raspberry_opacity50_stroke_3)
                 act_signin_text_fail.visibility = View.VISIBLE
             } else {
+                val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
                 requestToServer.service.requestSignin(
                     body
                 ).enqueue(object : Callback<ResponseSignInData>{
