@@ -21,6 +21,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/progress02"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
     <TextView
         android:id="@+id/tv_nickname"
         android:layout_width="wrap_content"
@@ -81,7 +90,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableEnd="@drawable/btn_calendar"
-        android:textColorHint="tripteller_grey_04_2"
         android:hint="2021.04.12"
         android:background="@drawable/cost_gray_roundbox_3"
         android:paddingHorizontal="8dp"
@@ -113,7 +121,6 @@
         android:drawableEnd="@drawable/btn_calendar"
         android:textColor="@color/tripteller_black"
         android:background="@drawable/cost_gray_roundbox_3"
-        android:textColorHint="tripteller_grey_04_2"
         android:drawablePadding="15dp"
         android:hint="2021.04.12"
         android:padding="8dp"
@@ -167,7 +174,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:text="여행 기간은"
+        android:text="총 여행 경비는"
         android:textColor="@color/tripteller_black"
         android:textFontWeight="400"
         android:textSize="18sp"
@@ -179,7 +186,6 @@
         android:layout_width="141dp"
         android:layout_height="wrap_content"
         android:hint="1,000,000"
-        android:textColorHint="tripteller_grey_04_2"
         android:inputType="number"
         android:layout_marginTop="9dp"
         android:paddingVertical="7dp"
@@ -228,7 +234,7 @@
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:text="1,000,000" />
+        android:text="1,000,000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -243,6 +249,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <Button
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"

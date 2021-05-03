@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.detail.RequestLastActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:paddingVertical="12dp"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:text="컨설팅 신청"
+        android:textColor="@color/tripteller_black"
+        android:textFontWeight="400"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/progress03"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="마지막으로 "
+                android:textColor="@color/tripteller_black"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="트텔"
+                android:textColor="@color/tripteller_black"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_last"
+                app:layout_constraintTop_toTopOf="@+id/tv_last" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="님의 여행에 대해"
+                android:textColor="@color/tripteller_black"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_nickname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr"
+                android:includeFontPadding="false"
+                android:text="알아야 할 게 있다면 간단히 설명해 주세요."
+                android:textColor="@color/tripteller_black"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_last"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+
+            <EditText
+                android:id="@+id/et_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/cost_gray_roundbox_3"
+                android:fontFamily="@font/notosanskr"
+                android:gravity="top"
+                android:hint="여행하게 된 계기나 목적이 있나요?"
+                android:includeFontPadding="false"
+                android:maxLength="150"
+                android:minHeight="160dp"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="38dp"
+                android:textColorHint="@color/tripteller_grey_04"
+                android:textFontWeight="400"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/tv_goal_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/notosanskr"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:text="0/150"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:textFontWeight="400"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_goal"
+                app:layout_constraintEnd_toEndOf="@+id/et_goal" />
+
+            <EditText
+                android:id="@+id/et_want"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/cost_gray_roundbox_3"
+                android:fontFamily="@font/notosanskr"
+                android:gravity="top"
+                android:hint="원하는 여행이 있나요?"
+                android:includeFontPadding="false"
+                android:maxLength="250"
+                android:minHeight="287dp"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="38dp"
+                android:textColorHint="@color/tripteller_grey_04"
+                android:textFontWeight="400"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_goal" />
+
+            <TextView
+                android:id="@+id/tv_want_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/notosanskr"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:text="0/250"
+                android:textColor="@color/tripteller_grey_05_2"
+                android:textFontWeight="400"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_want"
+                app:layout_constraintEnd_toEndOf="@+id/et_want" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"
+        android:background="@drawable/selector_nextbtn"
+        android:fontFamily="@font/notosanskr"
+        android:includeFontPadding="false"
+        android:paddingVertical="12dp"
+        android:text="신청하기"
+        android:textColor="@color/tripteller_white"
+        android:textFontWeight="500"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

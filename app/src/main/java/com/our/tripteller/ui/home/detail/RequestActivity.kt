@@ -1,6 +1,7 @@
 package com.our.tripteller.ui.home.detail
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.our.tripteller.R
@@ -27,6 +28,10 @@ class RequestActivity : AppCompatActivity() {
                 tv_end.text = (month+1).toString() + "월" + day.toString() + "일"
             }, cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DATE)).show();
 
+        }
+
+        btn_next.setOnClickListener {
+            startActivity(Intent(this, RequestLastActivity::class.java))
         }
     }
 }
