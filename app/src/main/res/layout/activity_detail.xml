@@ -30,11 +30,9 @@
                     android:id="@+id/iv_mainimg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
                     android:foreground="@color/black_30"
                     android:scaleType="centerCrop"
                     android:src="@drawable/picture_1"
-                    app:layout_collapseMode="parallax"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +51,6 @@
                     android:textColor="@color/tripteller_white"
                     android:textFontWeight="500"
                     android:textSize="14dp"
-                    app:layout_collapseMode="pin"
                     app:layout_constraintBottom_toTopOf="@+id/tv_intro1"
                     app:layout_constraintStart_toStartOf="@+id/tv_intro1" />
 

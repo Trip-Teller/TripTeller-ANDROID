@@ -103,6 +103,7 @@ class RequestFilterActivity : AppCompatActivity() {
 
         btn_next.setOnClickListener {
             startActivity(Intent(this, RequestActivity::class.java))
+            finish()
         }
     }
     private fun check(v: TextView){

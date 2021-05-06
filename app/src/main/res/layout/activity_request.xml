@@ -200,7 +200,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:text="원이고"
+        android:text="원 입니다."
         android:textColor="@color/tripteller_black"
         android:textFontWeight="400"
         android:textSize="16dp"
@@ -216,7 +216,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:text="일 평균 경비는"
+        tools:text="일 평균 경비는"
         android:textColor="@color/tripteller_black"
         android:textFontWeight="400"
         android:textSize="18dp"
@@ -234,14 +234,14 @@
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:text="1,000,000" />
+        tools:text="1,000,000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/notosanskr"
         android:includeFontPadding="false"
-        android:text="원이에요."
+        tools:text="원이에요."
         android:textColor="@color/tripteller_black"
         android:textFontWeight="400"
         android:textSize="18dp"

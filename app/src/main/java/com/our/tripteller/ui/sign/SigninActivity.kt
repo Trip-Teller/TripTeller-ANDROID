@@ -78,7 +78,7 @@ class SigninActivity : AppCompatActivity() {
                             finish()
                         } else {
                             Log.d("통신 실패 ", "아디, 비번 확인해")
-                            Toast.makeText(this@SigninActivity, "아이디, 비밀번호를 확인하세요.", Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(this@SigninActivity, "아이디, 비밀번호를 확인하세요.", Toast.LENGTH_SHORT).show()
                         }
                     }
                     override fun onFailure(call: Call<ResponseSignInData>, t: Throwable) {

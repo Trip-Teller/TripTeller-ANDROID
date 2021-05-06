@@ -79,5 +79,8 @@ class FilterActivity : AppCompatActivity() {
         act_filter_btn_luxury.setOnClickListener {
             act_filter_btn_luxury.isSelected = !act_filter_btn_luxury.isSelected
         }
+        btn_fin.setOnClickListener {
+            finish()
+        }
     }
 }

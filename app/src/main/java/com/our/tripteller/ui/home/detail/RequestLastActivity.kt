@@ -1,10 +1,12 @@
 package com.our.tripteller.ui.home.detail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import com.our.tripteller.R
+import com.our.tripteller.ui.chat.chatroom.ChatRoomActivity
 import kotlinx.android.synthetic.main.activity_request_last.*
 
 class RequestLastActivity : AppCompatActivity() {
@@ -49,6 +51,11 @@ class RequestLastActivity : AppCompatActivity() {
                 }
             }
         })
+
+        btn_apply.setOnClickListener {
+            startActivity(Intent(this, ChatRoomActivity::class.java))
+            finish()
+        }
 
     }
 }
