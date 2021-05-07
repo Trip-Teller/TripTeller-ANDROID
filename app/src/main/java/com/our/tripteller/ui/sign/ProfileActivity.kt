@@ -24,7 +24,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         //이전 회원가입에서 id, password 받아온다.
-        val id = intent.getStringExtra("id")
+        val email = intent.getStringExtra("email")
         val password = intent.getStringExtra("password")
 
         //닉네임 설정
@@ -123,9 +123,9 @@ class ProfileActivity : AppCompatActivity() {
 
                 birthDate = "${act_profile_text_year.text}-${act_profile_text_month.text}-${act_profile_text_day.text}"
 
-                Log.d("SignUp 2 ", "$id $password $nickname $gender $birthDate ${2021-act_profile_text_year.text.toString().toInt()+1}")
+                Log.d("SignUp 2 ", "$email $password $nickname $gender $birthDate ${2021-act_profile_text_year.text.toString().toInt()+1}")
                 val intent = Intent(this, ProfileImageActivity::class.java)
-                intent.putExtra("id", id)
+                intent.putExtra("email", email)
                 intent.putExtra("password", password)
                 intent.putExtra("nickname", nickname)
                 intent.putExtra("gender", gender)

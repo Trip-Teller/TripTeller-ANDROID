@@ -8,7 +8,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import com.our.tripteller.R
-import kotlinx.android.synthetic.main.activity_chat_room.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
@@ -16,7 +15,7 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        var id = false
+        var email = false
         var pwd1 = false
         var pwd2 = false
         var same = false
@@ -48,7 +47,7 @@ class SignupActivity : AppCompatActivity() {
 
         act_signup_btn.setOnClickListener {
 
-            id = if (act_signup_edit_id.text.isNullOrBlank()) {
+            email = if (act_signup_edit_id.text.isNullOrBlank()) {
                 act_signup_edit_id.setBackgroundResource(R.drawable.raspberry_stroke_3)
                 false
             } else {
@@ -87,9 +86,9 @@ class SignupActivity : AppCompatActivity() {
                     false
                 }
 
-            if (id && pwd1 && pwd2 && same) {
+            if (email && pwd1 && pwd2 && same) {
                 val intent = Intent(this, ProfileActivity::class.java)
-                intent.putExtra("id", act_signup_edit_id.text.toString())
+                intent.putExtra("email", act_signup_edit_id.text.toString())
                 intent.putExtra("password", act_signup_edit_pwd1.text.toString())
                 Log.d("SignUp 1 ", "${act_signup_edit_id.text} ${act_signup_edit_pwd1.text}")
                 startActivity(intent)
