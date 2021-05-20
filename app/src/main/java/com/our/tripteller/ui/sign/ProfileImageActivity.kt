@@ -1,5 +1,6 @@
 package com.our.tripteller.ui.sign
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.database.Cursor
@@ -23,7 +24,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.File
-
 
 class ProfileImageActivity : AppCompatActivity() {
 
@@ -60,19 +60,9 @@ class ProfileImageActivity : AppCompatActivity() {
 
         act_profile_image_btn.setOnClickListener {
 
-//            signinData.put("age", "${intent.getIntExtra("age", 111)}")
-//            signinData.put("birthDate", intent.getStringExtra("birthDate"))
-//            signinData.put("password", intent.getStringExtra("password"))
-//            signinData.put("gender", intent.getStringExtra("gender"))
-//            signinData.put("email", intent.getStringExtra("email"))
-//            signinData.put("nickname", intent.getStringExtra("nickname"))
-//
-//            val body = JsonParser.parseString(signinData.toString()) as JsonObject
-
-            val image = File(currentImageUri.path)	// 경로 예시 : /storage/emulated/0/Download/filename.pdf
-            Log.d("여기는 밖에서의 image 경로1", currentImageUri.path)
-            Log.d("여기는 밖에서의 image 경로2", image.absolutePath)
-            val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), image)
+            val image = File(getPathFromUri(currentImageUri).toString())	// 경로 예시 : /storage/emulated/0/Download/filename.pdf
+            Log.d("여기는 밖에서의 image 경로1",getPathFromUri(currentImageUri).toString())
+            val requestFile = RequestBody.create("image/*".toMediaTypeOrNull(), image)
 
             val file = MultipartBody.Part.createFormData("profileImage", image.name, requestFile)
 
@@ -104,10 +94,9 @@ class ProfileImageActivity : AppCompatActivity() {
                             finish()
                             Log.d("통신 성공", "${response.body()}")
 
+                        } else {
+                            Log.d("통신 성공인가 실패인가", "${response.body()}")
                         }
-                        Log.d("통신 성공인가 실패인가", "${response.body()}")
-                        Log.d("통신 성공인가 실패인가", "${response.errorBody()}")
-
                     }
                     override fun onFailure(call: Call<ResponseSignUpData>, t: Throwable) {
                         Log.d("통신 에러", "에러에러에러. ${call}, ${t}")
@@ -159,20 +148,121 @@ class ProfileImageActivity : AppCompatActivity() {
 
     }
 
-    // 절대경로 변환
-    fun absolutelyPath(path: Uri): String {
-
-        val proj: Array<String> = arrayOf(MediaStore.Images.Media.DATA)
-        val c: Cursor? = contentResolver.query(path, proj, null, null, null)
-        val index = c?.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-        c?.moveToFirst()
-
-        return index?.let { c.getString(it) }.toString()
-
-//        val proj = arrayOf(MediaStore.Images.Media.DATA)
-//        val c = managedQuery(path, proj, null, null, null)
-//        val index = c.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-//
-//        c.moveToFirst()
+    @SuppressLint("Recycle")
+    private fun getPathFromUri(uri: Uri?): String? {
+        val cursor: Cursor = contentResolver.query(uri!!, null, null, null, null)!!
+        val path = cursor.getString(cursor.getColumnIndex("_data"))
+        Log.d("cursor name1", cursor.getColumnName(1))
+        Log.d("cursor name2", cursor.getColumnName(2))
+        Log.d("cursor name3", cursor.getColumnName(3))
+        Log.d("cursor name4", cursor.getColumnName(4))
+        Log.d("cursor name5", cursor.getColumnName(5))
+        Log.d("cursor name6", cursor.getColumnName(6))
+        cursor.close()
+        return path
     }
+
+//    fun getRealPathFromURI(context: Context, uri: Uri): String? {
+//
+//        // DocumentProvider
+//        if (DocumentsContract.isDocumentUri(context, uri)) {
+//
+//            // ExternalStorageProvider
+//            if (isExternalStorageDocument(uri)) {
+//                val docId = DocumentsContract.getDocumentId(uri)
+//                val split: Array<String?> = docId.split(":".toRegex()).toTypedArray()
+//                val type = split[0]
+//                return if ("primary".equals(type, ignoreCase = true)) {
+//                    (Environment.getExternalStorageDirectory().toString() + "/"
+//                            + split[1])
+//                } else {
+//                    val SDcardpath = getRemovableSDCardPath(context)?.split("/Android".toRegex())!!.toTypedArray()[0]
+//                    SDcardpath + "/" + split[1]
+//                }
+//            } else if (isDownloadsDocument(uri)) {
+//                val id = DocumentsContract.getDocumentId(uri)
+//                val contentUri = ContentUris.withAppendedId(
+//                    Uri.parse("content://downloads/public_downloads"),
+//                    java.lang.Long.valueOf(id))
+//                return getDataColumn(context, contentUri, null, null)
+//            } else if (isMediaDocument(uri)) {
+//                val docId = DocumentsContract.getDocumentId(uri)
+//                val split: Array<String?> = docId.split(":".toRegex()).toTypedArray()
+//                val type = split[0]
+//                var contentUri: Uri? = null
+//                if ("image" == type) {
+//                    contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+//                } else if ("video" == type) {
+//                    contentUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+//                } else if ("audio" == type) {
+//                    contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+//                }
+//                val selection = "_id=?"
+//                val selectionArgs = arrayOf(split[1])
+//                return getDataColumn(context, contentUri, selection,
+//                    selectionArgs)
+//            }
+//        } else {
+//            if ("content".equals(uri.getScheme(), ignoreCase = true)) {
+//                // Return the remote address
+//                return if (isGooglePhotosUri(uri)) uri.getLastPathSegment() else getDataColumn(context, uri, null, null)
+//            } else if ("file".equals(uri.getScheme(), ignoreCase = true)) {
+//                return uri.path
+//            }
+//        }
+//        return null
+//    }
+//
+//    fun getRemovableSDCardPath(context: Context?): String? {
+//        val storages =
+//            ContextCompat.getExternalFilesDirs(context!!, null)
+//        return if (storages.size > 1 && storages[0] != null && storages[1] != null) storages[1].toString() else ""
+//    }
+//
+//    fun getDataColumn(
+//        context: Context, uri: Uri?,
+//        selection: String?, selectionArgs: Array<String?>?
+//    ): String? {
+//        var cursor: Cursor? = null
+//        val column = "_data"
+//        val projection = arrayOf(column)
+//        try {
+//            cursor = context.contentResolver.query(
+//                uri!!, projection,
+//                selection, selectionArgs, null
+//            )
+//            if (cursor != null && cursor.moveToFirst()) {
+//                val index = cursor.getColumnIndexOrThrow(column)
+//                return cursor.getString(index)
+//            }
+//        } finally {
+//            cursor?.close()
+//        }
+//        return null
+//    }
+//
+//
+//    fun isExternalStorageDocument(uri: Uri): Boolean {
+//        return "com.android.externalstorage.documents" == uri
+//            .authority
+//    }
+//
+//
+//    fun isDownloadsDocument(uri: Uri): Boolean {
+//        return "com.android.providers.downloads.documents" == uri
+//            .authority
+//    }
+//
+//
+//    fun isMediaDocument(uri: Uri): Boolean {
+//        return "com.android.providers.media.documents" == uri
+//            .authority
+//    }
+//
+//
+//    fun isGooglePhotosUri(uri: Uri): Boolean {
+//        return "com.google.android.apps.photos.content" == uri
+//            .authority
+//    }
+
 }
